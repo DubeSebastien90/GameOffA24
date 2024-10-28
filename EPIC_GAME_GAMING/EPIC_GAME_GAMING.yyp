@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.2.0.132",
   },
   "name":"EPIC_GAME_GAMING",
   "resources":[
@@ -39,6 +39,7 @@
     {"id":{"name":"obj_scene","path":"objects/obj_scene/obj_scene.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_intro","path":"sprites/spr_intro/spr_intro.yy",},},
+    {"id":{"name":"spr_intro_2","path":"sprites/spr_intro_2/spr_intro_2.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
