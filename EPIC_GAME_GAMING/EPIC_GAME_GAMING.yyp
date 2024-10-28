@@ -34,9 +34,11 @@
   },
   "name":"EPIC_GAME_GAMING",
   "resources":[
-    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"fnt_pixel","path":"fonts/fnt_pixel/fnt_pixel.yy",},},
+    {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
+    {"id":{"name":"obj_scene","path":"objects/obj_scene/obj_scene.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_photos","path":"sprites/spr_photos/spr_photos.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
