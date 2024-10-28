@@ -23,5 +23,6 @@
     {"name":"spr_date_explosion","order":4,"path":"sprites/spr_date_explosion/spr_date_explosion.yy",},
     {"name":"spr_intro_2","order":1,"path":"sprites/spr_intro_2/spr_intro_2.yy",},
     {"name":"spr_intro_3","order":3,"path":"sprites/spr_intro_3/spr_intro_3.yy",},
+    {"name":"spr_chambre","order":5,"path":"sprites/spr_chambre/spr_chambre.yy",},
   ],
 }
