@@ -75,7 +75,7 @@ function setDependances(){
 	sc_etang_entree.next_scene[0] = sc_etang_skinny_dip
 	sc_etang_entree.next_scene[1] = sc_etang_canard
 	
-	//branch canard
+	//branch
 	
 	sc_etang_canard.next_scene[0] = sc_kiss_fille
 	sc_etang_canard.next_scene[1] = sc_kiss_fille
@@ -84,6 +84,10 @@ function setDependances(){
 	sc_etang_skinny_dip.next_scene[0] = sc_restart
 	sc_kiss_fille.next_scene[0] = sc_restart
 	sc_kiss_canard.next_scene[0] = sc_restart
+	
+	//quincaillerie
+	
+	sc_quincaillerie.next_scene[0] = sc_quincaillerie_tout_niquer
 	
 }
 
@@ -130,7 +134,7 @@ sc_kiss_canard = instance_create_depth(0,0,-1000,obj_scene)
 sc_kiss_fille = instance_create_depth(0,0,-1000,obj_scene)
 
 
-
+sc_quincaillerie_tout_niquer = instance_create_depth(0,0,-1000,obj_scene)
 
 with (sc_restart){
 	image = spr_chambre
@@ -185,7 +189,7 @@ with (sc_resto_explosion){
 }
 
 with (sc_resto_serveur){
-	image = spr_date_explosion // a changer
+	image = spr_serveur
 	nb_repliques = 4
 	nb_dialogues = 2
 	dialogue[0] = "Bonsoir mes tourtereaux..."
@@ -198,49 +202,49 @@ with (sc_resto_serveur){
 
 
 with (sc_resto_vers_eau){
-	image = spr_date_explosion // a changer
+	image = spr_verre_eau
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEYHEUHFIAEOFSEAOFIDF *mort*"
 }
 
 with (sc_resto_vers_huile){
-	image = spr_date_explosion // a changer
+	image = spr_date_huile // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "What, t'es trop bizarre lol."
 }
 
 with (sc_resto_apres_huile){
-	image = spr_date_explosion // a changer
+	image = spr_date_huile // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "[TEXTE À CHANGER]"
 }
 
 with (sc_resto_apres_spag){
-	image = spr_date_explosion // a changer
+	image = spr_date_spag // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "[TEXTE À CHANGER]"
 }
 
 with (sc_resto_spag){
-	image = spr_date_explosion // a changer
+	image = spr_date_spag // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Le classique. Ok, t'es de même."
 }
 
 with (sc_resto_toilette){
-	image = spr_date_explosion // a changer
+	image = spr_toilettes // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Faut vraiment que j'aille aux toilettes."
+	dialogue[0] = "Omg j'ai passé trop proche de la catastrophe, allez, on respire et on y retourne."
 }
 
 with (sc_resto_demasquage){
-	image = spr_date_explosion // a changer
+	image = spr_pas_perruque // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
@@ -248,7 +252,7 @@ with (sc_resto_demasquage){
 
 
 with (sc_resto_demande_next_activite){
-	image = spr_date_explosion // a changer
+	image = spr_date_1 // a changer
 	nb_repliques = 3
 	nb_dialogues = 2
 	dialogue[0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
@@ -259,7 +263,7 @@ with (sc_resto_demande_next_activite){
 }
 
 with (sc_etang_entree){
-	image = spr_date_explosion // a changer
+	image = spr_date_etang // a changer
 	nb_repliques = 2
 	nb_dialogues = 1
 	dialogue[0] = "Vraiment trop bien cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
@@ -269,7 +273,7 @@ with (sc_etang_entree){
 
 
 with (sc_etang_canard){
-	image = spr_date_explosion // a changer
+	image = spr_date_canard // a changer
 	nb_repliques = 2
 	nb_dialogues = 1
 	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... UwU "
@@ -278,7 +282,7 @@ with (sc_etang_canard){
 }
 
 with (sc_etang_skinny_dip){
-	image = spr_intro_1 // a changer
+	image = spr_skinny_dip // a changer
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE"
@@ -286,17 +290,26 @@ with (sc_etang_skinny_dip){
 }
 
 with (sc_kiss_fille){
-	image = spr_intro_1 // a changer
+	image = spr_bisou // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Wow... Tu as réussi ! Félicitaions ! "
 }
 
 with (sc_kiss_canard){
-	image = spr_intro_1 // a changer
+	image = spr_bisou_CANARD // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "COMME QUOI LE VRAI AMOUR EST PARFOIS CELUI QUI VIENT À NOUS <3 <3 <3"
 }
+
+with (sc_quincaillerie_tout_niquer){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = ""
+}
+
+
 setDependances()
 setNextScene(sc_restart)
