@@ -7,7 +7,7 @@ cooldownSpace = 0
 scene_actuelle = noone
 
 //affichage
-image = spr_intro
+image = spr_intro_1
 
 nb_dialogues = 0
 dialogue_actuel = 0
@@ -28,31 +28,38 @@ function setDependances(){
 	sc_intro_1.next_scene[0] = sc_intro_2
 	sc_intro_1.next_scene[1] = sc_intro_2
 	
-	sc_intro_2.next_scene[0] = sc_intro_1
+	sc_intro_2.next_scene[0] = sc_intro_3
+	sc_intro_2.next_scene[1] = sc_intro_3
 }
 
 //scenes
 sc_intro_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_intro_2 = instance_create_depth(0,0,-1000,obj_scene)
+sc_intro_3 = instance_create_depth(0,0,-1000,obj_scene)
 
 with (sc_intro_1){
-	image = spr_intro
-	nb_repliques = 2
+	image = spr_intro_1
+	nb_repliques = 0
 	nb_dialogues = 2
-	replique[0] = "Replique 1"
-	replique[1] = "Replique 2"
-	dialogue[0] = "Dialogue 1"
-	dialogue[1] = "Dialogue 2"
+	dialogue[0] = "Oh tiens regarde, un nouveau match sur Tinda!"
+	dialogue[1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie"
 }
 
 with (sc_intro_2){
 	image = spr_intro_2
-	nb_repliques = 1
-	nb_dialogues = 3
-	replique[0] = "Replique 1 pipi"
-	dialogue[0] = "Dialogue 1 pipi"
-	dialogue[1] = "Dialogue 2 pipi"
-	dialogue[2] = "Dialogue 3 pipi"
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Mais non! Que faire! Je suis un robot, mes émotions sont simulées par des circuits électriques..."
+	dialogue[1] = "Personne ne voudra de moi pour une relation à caractère romantique"
+
+}
+
+with (sc_intro_3){
+	image = spr_intro_3
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement"
+	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu"
 
 }
 
