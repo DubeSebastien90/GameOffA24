@@ -19,7 +19,7 @@ if press_space{
 	if dialogue_actuel < scene_actuelle.nb_dialogues-1{
 		dialogue_actuel += 1
 	} else {
-		setNextScene(scene_actuelle.next_scene[dialogue_actuel])
+		setNextScene(scene_actuelle.next_scene[replique_actuelle])
 	}
 	
 }

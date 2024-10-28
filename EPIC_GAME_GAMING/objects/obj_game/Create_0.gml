@@ -30,12 +30,16 @@ function setDependances(){
 	
 	sc_intro_2.next_scene[0] = sc_intro_3
 	sc_intro_2.next_scene[1] = sc_intro_3
+	
+	sc_intro_3.next_scene[0] = sc_resto
+	sc_intro_3.next_scene[1] = sc_resto
 }
 
 //scenes
 sc_intro_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_intro_2 = instance_create_depth(0,0,-1000,obj_scene)
 sc_intro_3 = instance_create_depth(0,0,-1000,obj_scene)
+sc_resto = instance_create_depth(0,0,-1000,obj_scene)
 
 with (sc_intro_1){
 	image = spr_intro_1
@@ -60,7 +64,17 @@ with (sc_intro_3){
 	nb_dialogues = 2
 	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement"
 	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu"
+}
 
+with (sc_resto){
+	image = spr_intro_3
+	nb_repliques = 3
+	nb_dialogues = 2
+	replique[0] = "Merci, je le sais déjà"
+	replique[1] = "Toi aussi, tu es très charmante"
+	replique[2] = "*Imploser*"
+	dialogue[0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
+	dialogue[1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
 }
 
 setDependances()

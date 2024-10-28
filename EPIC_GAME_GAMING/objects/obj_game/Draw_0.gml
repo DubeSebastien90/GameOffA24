@@ -3,7 +3,10 @@ if scene_actuelle != noone{
 if scene_actuelle.nb_repliques>0{ 
 	draw_sprite(scene_actuelle.image,0,10,10)
 } else{
-	draw_sprite(scene_actuelle.image,0,room_width/2 - sprite_get_width(scene_actuelle.image)/2,10)
+	draw_sprite_ext(scene_actuelle.image,0,room_width/2,room_height/2 + 12,0.92,0.92,0,c_white,1)
+	draw_set_alpha(0.6)
+	draw_rectangle_color(10-2,115-2,room_width-20 + 2, 115 + 19 + 2,c_black,c_black,c_black,c_black,false)
+	draw_set_alpha(1)
 }
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
