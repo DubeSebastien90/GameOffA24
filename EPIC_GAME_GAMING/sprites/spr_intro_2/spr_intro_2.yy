@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"gr_spr_cutscene",
+    "path":"folders/Sprites/gr_spr_cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
