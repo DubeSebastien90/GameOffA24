@@ -20,5 +20,7 @@
     {"name":"obj_game","order":1,"path":"objects/obj_game/obj_game.yy",},
     {"name":"obj_scene","order":2,"path":"objects/obj_scene/obj_scene.yy",},
     {"name":"spr_intro_2","order":1,"path":"sprites/spr_intro_2/spr_intro_2.yy",},
+    {"name":"spr_intro_3","order":2,"path":"sprites/spr_intro_3/spr_intro_3.yy",},
+    {"name":"spr_intro_4","order":3,"path":"sprites/spr_intro_4/spr_intro_4.yy",},
   ],
 }
