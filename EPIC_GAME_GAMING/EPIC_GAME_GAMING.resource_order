@@ -20,8 +20,8 @@
   "ResourceOrderSettings":[
     {"name":"obj_game","order":1,"path":"objects/obj_game/obj_game.yy",},
     {"name":"obj_scene","order":2,"path":"objects/obj_scene/obj_scene.yy",},
-    {"name":"spr_bisou_CANARD","order":18,"path":"sprites/spr_bisou_CANARD/spr_bisou_CANARD.yy",},
-    {"name":"spr_bisou_eve","order":8,"path":"sprites/spr_bisou_eve/spr_bisou_eve.yy",},
+    {"name":"spr_bisou_fille","order":18,"path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},
+    {"name":"spr_bisou_canard","order":8,"path":"sprites/spr_bisou_canard/spr_bisou_canard.yy",},
     {"name":"spr_date_1","order":2,"path":"sprites/spr_date_1/spr_date_1.yy",},
     {"name":"spr_date_canard","order":15,"path":"sprites/spr_date_canard/spr_date_canard.yy",},
     {"name":"spr_date_demander","order":12,"path":"sprites/spr_date_demander/spr_date_demander.yy",},
