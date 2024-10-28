@@ -34,6 +34,8 @@ function setDependances(){
 	sc_intro_3.next_scene[0] = sc_resto
 	
 	//resto
+	sc_resto.next_scene[0] = sc_resto_serveur
+	sc_resto.next_scene[1] = sc_resto_serveur
 	sc_resto.next_scene[2] = sc_resto_explosion
 		
 	sc_resto_explosion.next_scene[0] = sc_restart
