@@ -59,7 +59,7 @@ with (sc_intro_2){
 }
 
 with (sc_intro_3){
-	image = spr_intro_3
+	image = spr_date_1
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement"
