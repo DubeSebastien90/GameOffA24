@@ -48,21 +48,43 @@ function setDependances(){
 	
 	//branch toilettes
 	sc_resto_toilette.next_scene[0] = sc_resto_demasquage
-	sc_resto_demasquage[0] = sc_restart
+	sc_resto_demasquage.next_scene[0] = sc_restart
 	
 	//branch huile
-	sc_resto_vers_huile[0] = sc_resto_apres_huile
+	sc_resto_vers_huile.next_scene[0] = sc_resto_apres_huile
 	
 	//branch spaghatt
-	sc_resto_spag[0] = sc_resto_apres_spag
+	sc_resto_spag.next_scene[0] = sc_resto_apres_spag
 	
 	//branch eau
-	sc_resto_vers_eau[0] = sc_restart
+	sc_resto_vers_eau.next_scene[0] = sc_restart
 	
 	//on cloît le restaurant 
 	
-	sc_resto_apres_huile[0] = sc_resto_demande_next_activite
-	sc_resto_apres_spag[0] = sc_resto_demande_next_activite
+	sc_resto_apres_huile.next_scene[0] = sc_resto_demande_next_activite
+	sc_resto_apres_spag.next_scene[0] = sc_resto_demande_next_activite
+	
+	//activités
+	
+	sc_resto_demande_next_activite.next_scene[0] = sc_etang_entree
+	sc_resto_demande_next_activite.next_scene[1] = sc_quincaillerie
+	sc_resto_demande_next_activite.next_scene[2] = sc_film_entree
+	
+	//etang
+	
+	sc_etang_entree.next_scene[0] = sc_etang_skinny_dip
+	sc_etang_entree.next_scene[1] = sc_etang_canard
+	
+	//branch canard
+	
+	sc_etang_canard.next_scene[0] = sc_kiss_fille
+	sc_etang_canard.next_scene[1] = sc_kiss_fille
+	
+	
+	sc_etang_skinny_dip.next_scene[0] = sc_restart
+	sc_kiss_fille.next_scene[0] = sc_restart
+	sc_kiss_canard.next_scene[0] = sc_restart
+	
 }
 
 //scenes
@@ -91,6 +113,23 @@ sc_resto_apres_spag = instance_create_depth(0,0,-1000,obj_scene)
 sc_resto_apres_huile = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_resto_demande_next_activite = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_etang_entree = instance_create_depth(0,0,-1000,obj_scene)
+sc_film_entree = instance_create_depth(0,0,-1000,obj_scene)
+sc_quincaillerie = instance_create_depth(0,0,-1000,obj_scene)
+
+
+//etang
+
+sc_etang_canard = instance_create_depth(0,0,-1000,obj_scene)
+sc_etang_skinny_dip = instance_create_depth(0,0,-1000,obj_scene)
+
+//canard 
+
+sc_kiss_canard = instance_create_depth(0,0,-1000,obj_scene)
+sc_kiss_fille = instance_create_depth(0,0,-1000,obj_scene)
+
+
 
 
 with (sc_restart){
@@ -158,18 +197,106 @@ with (sc_resto_serveur){
 }
 
 
+with (sc_resto_vers_eau){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEYHEUHFIAEOFSEAOFIDF *mort*"
+}
+
+with (sc_resto_vers_huile){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "What, t'es trop bizarre lol."
+}
+
+with (sc_resto_apres_huile){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "[TEXTE À CHANGER]"
+}
+
+with (sc_resto_apres_spag){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "[TEXTE À CHANGER]"
+}
+
+with (sc_resto_spag){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "Le classique. Ok, t'es de même."
+}
+
+with (sc_resto_toilette){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "Faut vraiment que j'aille aux toilettes."
+}
+
+with (sc_resto_demasquage){
+	image = spr_date_explosion // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
+}
+
+
 with (sc_resto_demande_next_activite){
 	image = spr_date_explosion // a changer
 	nb_repliques = 3
 	nb_dialogues = 2
 	dialogue[0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
-	dialogue[1] = "Aimerais-tu qu'on aille ailleurs ?"
+	dialogue[1] = "Aimerais-tu qu'on aille ailleurs ? Quelle idée préfères-tu ?"
 	replique[0] = "Je connais un étang trop chou pas trop loin d'ici..."
-	replique[1] = "Un verre d'huile, bip boup."
-	replique[2] = "Un spaghetti sauce bolognaise !"
-	replique[3] = "OMG J'ÉTAIS PAS PRÊT POUR ÇA ! *Courir aux toilettes*"
+	replique[1] = "J'ai quelques commissions à aller faire..."
+	replique[2] = "Et si on allait chez moi écouter un film ? "
+}
+
+with (sc_etang_entree){
+	image = spr_date_explosion // a changer
+	nb_repliques = 2
+	nb_dialogues = 1
+	dialogue[0] = "Vraiment trop bien cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
+	replique[0] = "SKINNY DIP !!"
+	replique[1] = "Nourrir les canards serait un choix à la fois écologiquement responsable et rapprocheur :)"
 }
 
 
+with (sc_etang_canard){
+	image = spr_date_explosion // a changer
+	nb_repliques = 2
+	nb_dialogues = 1
+	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... UwU "
+	replique[0] = "L'embrasser"
+	replique[1] = "Embrasser le canard."
+}
+
+with (sc_etang_skinny_dip){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE"
+	dialogue[1] = "Je vais probablement mourrir !"
+}
+
+with (sc_kiss_fille){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "Wow... Tu as réussi ! Félicitaions ! "
+}
+
+with (sc_kiss_canard){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 1
+	dialogue[0] = "COMME QUOI LE VRAI AMOUR EST PARFOIS CELUI QUI VIENT À NOUS <3 <3 <3"
+}
 setDependances()
 setNextScene(sc_restart)
