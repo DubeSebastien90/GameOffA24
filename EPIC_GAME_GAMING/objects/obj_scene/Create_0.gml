@@ -9,6 +9,7 @@ nb_repliques = 0
 replique[0] = ""
 replique[1] = ""
 replique[2] = ""
+replique[3] = ""
 
 image = noone
 

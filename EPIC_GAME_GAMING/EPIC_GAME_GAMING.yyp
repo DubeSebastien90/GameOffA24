@@ -38,7 +38,7 @@
     {"id":{"name":"fnt_pixel","path":"fonts/fnt_pixel/fnt_pixel.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_scene","path":"objects/obj_scene/obj_scene.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_questions","path":"rooms/rm_questions/rm_questions.yy",},},
     {"id":{"name":"spr_bisou_canard","path":"sprites/spr_bisou_canard/spr_bisou_canard.yy",},},
     {"id":{"name":"spr_bisou_fille","path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},},
     {"id":{"name":"spr_chambre","path":"sprites/spr_chambre/spr_chambre.yy",},},
@@ -62,7 +62,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_questions","path":"rooms/rm_questions/rm_questions.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
