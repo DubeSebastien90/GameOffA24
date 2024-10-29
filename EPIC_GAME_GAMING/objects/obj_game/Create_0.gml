@@ -83,7 +83,7 @@ function setDependances(){
 	
 	//quincaillerie
 	
-	sc_quincaillerie.next_scene[0] = sc_quincaillerie_tout_niquer
+	//sc_quincaillerie.next_scene[0] = sc_rester_calme
 	
 }
 
@@ -128,8 +128,19 @@ sc_kiss_canard = instance_create_depth(0,0,-1000,obj_scene)
 sc_kiss_fille = instance_create_depth(0,0,-1000,obj_scene)
 
 
-sc_quincaillerie_tout_niquer = instance_create_depth(0,0,-1000,obj_scene)
+//quicaillerie
+sc_q_rester_calme = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_indigner = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
 
+sc_q_perdre_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gagner_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_se_promener = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_chercher_arme = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
 
 
 
@@ -244,7 +255,7 @@ with (sc_resto_demande_next_activite){
 	dialogue[0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
 	dialogue[1] = "Aimerais-tu qu'on aille ailleurs ? Quelle idée préfères-tu ?"
 	replique[0] = "Je connais un étang trop chou pas trop loin d'ici..."
-	replique[1] = "J'ai quelques commissions à aller faire..."
+	replique[1] = "Je te laisse décider, emmène moi à ton endroit favori !"
 	replique[2] = "Et si on allait chez moi écouter un film ? "
 }
 
@@ -290,7 +301,16 @@ with (sc_kiss_canard){
 	dialogue[1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
 }
 
-with (sc_quincaillerie_tout_niquer){
+//quicaillerie
+with(sc_quincaillerie){
+	image = spr_intro_1 // a changer
+	nb_repliques = 3
+	nb_dialogues = 3
+	dialogue[0] = "Parfait, j'avais quelques comissions à faire"
+}
+
+
+with (sc_q_rester_calme){
 	image = spr_intro_1 // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
