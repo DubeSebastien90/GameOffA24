@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_date_spag",
   "bboxMode":0,
-  "bbox_bottom":199,
+  "bbox_bottom":169,
   "bbox_left":0,
   "bbox_right":299,
   "bbox_top":0,

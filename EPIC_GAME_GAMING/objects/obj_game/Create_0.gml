@@ -9,7 +9,7 @@ cooldown_space = 0
 scene_actuelle = noone
 
 //affichage
-image = spr_intro_1
+image = spr_chambre
 
 nb_dialogues = 0
 dialogue_actuel = 0
@@ -51,18 +51,14 @@ function setDependances(){
 	sc_resto_demasquage.next_scene[0] = sc_restart
 	
 	//branch huile
-	sc_resto_vers_huile.next_scene[0] = sc_resto_apres_huile
+	sc_resto_vers_huile.next_scene[0] = sc_resto_demande_next_activite
 	
 	//branch spaghatt
-	sc_resto_spag.next_scene[0] = sc_resto_apres_spag
+	sc_resto_spag.next_scene[0] = sc_resto_demande_next_activite
 	
 	//branch eau
 	sc_resto_vers_eau.next_scene[0] = sc_restart
 	
-	//on cloît le restaurant 
-	
-	sc_resto_apres_huile.next_scene[0] = sc_resto_demande_next_activite
-	sc_resto_apres_spag.next_scene[0] = sc_resto_demande_next_activite
 	
 	//activités
 	
@@ -113,8 +109,6 @@ sc_resto_toilette = instance_create_depth(0,0,-1000,obj_scene)
 sc_resto_demasquage = instance_create_depth(0,0,-1000,obj_scene)
 
 //ici on demande pour l'autre activité
-sc_resto_apres_spag = instance_create_depth(0,0,-1000,obj_scene)
-sc_resto_apres_huile = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_resto_demande_next_activite = instance_create_depth(0,0,-1000,obj_scene)
 
@@ -140,7 +134,7 @@ with (sc_restart){
 	image = spr_chambre
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Appuies sur la barre d'espace pour commencer"
+	dialogue[0] = "Appuies sur la barre d'espace pour commencer."
 }
 
 with (sc_intro_1){
@@ -148,7 +142,7 @@ with (sc_intro_1){
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Oh tiens regarde, un nouveau match sur Tinda!"
-	dialogue[1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie"
+	dialogue[1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie."
 }
 
 with (sc_intro_2){
@@ -156,7 +150,7 @@ with (sc_intro_2){
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Mais non! Que faire! Je suis un robot, mes émotions sont simulées par des circuits électriques..."
-	dialogue[1] = "Personne ne voudra de moi pour une relation à caractère romantique"
+	dialogue[1] = "Personne ne voudra de moi pour une relation à caractère romantique."
 
 }
 
@@ -164,16 +158,16 @@ with (sc_intro_3){
 	image = spr_intro_3
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement"
-	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu"
+	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement."
+	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu."
 }
 
 with (sc_resto){
 	image = spr_date_1
 	nb_repliques = 3
 	nb_dialogues = 2
-	replique[0] = "Merci, je le sais déjà"
-	replique[1] = "Toi aussi, tu es très charmante"
+	replique[0] = "Merci, je le sais déjà."
+	replique[1] = "Toi aussi, tu es très charmante."
 	replique[2] = "*Imploser*"
 	dialogue[0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
 	dialogue[1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
@@ -185,7 +179,7 @@ with (sc_resto_explosion){
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "BOUM POW AAAAAAAAAAAAH"
-	dialogue[1] = "Zute de flute, pour une fois que ma date se passait bien"
+	dialogue[1] = "Zute de flute, pour une fois que ma date se passait à merveille."
 }
 
 with (sc_resto_serveur){
@@ -205,46 +199,35 @@ with (sc_resto_vers_eau){
 	image = spr_verre_eau
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEYHEUHFIAEOFSEAOFIDF *mort*"
+	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEYHEUHFIAEOFSEAOFIDF *mort soufffrante*"
 }
 
 with (sc_resto_vers_huile){
-	image = spr_date_huile // a changer
+	image = spr_date_huile 
 	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = "What, t'es trop bizarre lol."
+	nb_dialogues = 2
+	dialogue[0] = "What, t'es trop bizarre lol. Je trouve ça très masculin boire de l'huile, j'aime ça."
+	dialogue[1] = "Quoi? C'est pas bizarre du tout manger une carotte... "
 }
 
-with (sc_resto_apres_huile){
-	image = spr_date_huile // a changer
-	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = "[TEXTE À CHANGER]"
-}
-
-with (sc_resto_apres_spag){
-	image = spr_date_spag // a changer
-	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = "[TEXTE À CHANGER]"
-}
 
 with (sc_resto_spag){
-	image = spr_date_spag // a changer
+	image = spr_date_spag 
 	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = "Le classique. Ok, t'es de même."
+	nb_dialogues = 2
+	dialogue[0] = "Le classique. Ok je savais pas que t'étais de même."
+	dialogue[1] = "Arrête! Une carotte c'est vraiment plus original."
 }
 
 with (sc_resto_toilette){
-	image = spr_toilettes // a changer
+	image = spr_toilettes 
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Omg j'ai passé trop proche de la catastrophe, allez, on respire et on y retourne."
 }
 
 with (sc_resto_demasquage){
-	image = spr_pas_perruque // a changer
+	image = spr_pas_perruque 
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
@@ -252,7 +235,7 @@ with (sc_resto_demasquage){
 
 
 with (sc_resto_demande_next_activite){
-	image = spr_date_1 // a changer
+	image = spr_date_1 
 	nb_repliques = 3
 	nb_dialogues = 2
 	dialogue[0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
@@ -263,17 +246,17 @@ with (sc_resto_demande_next_activite){
 }
 
 with (sc_etang_entree){
-	image = spr_date_etang // a changer
+	image = spr_date_etang 
 	nb_repliques = 2
 	nb_dialogues = 1
-	dialogue[0] = "Vraiment trop bien cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
+	dialogue[0] = "Vraiment charmant cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
 	replique[0] = "SKINNY DIP !!"
 	replique[1] = "Nourrir les canards serait un choix à la fois écologiquement responsable et rapprocheur :)"
 }
 
 
 with (sc_etang_canard){
-	image = spr_date_canard // a changer
+	image = spr_date_canard 
 	nb_repliques = 2
 	nb_dialogues = 1
 	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... UwU "
@@ -282,25 +265,26 @@ with (sc_etang_canard){
 }
 
 with (sc_etang_skinny_dip){
-	image = spr_skinny_dip // a changer
+	image = spr_skinny_dip 
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE"
-	dialogue[1] = "Je vais probablement mourrir !"
+	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE ÉNORMÉMENT"
+	dialogue[1] = "Au moins j'aurai vu une femme nue avant ma mort ! Yes !"
 }
 
 with (sc_kiss_fille){
-	image = spr_bisou_fille // a changer
+	image = spr_bisou_fille 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Wow... Tu as réussi ! Félicitaions ! "
+	dialogue[0] = "Mwah smack smack ! Tu as réussi, bien joué !"
 }
 
 with (sc_kiss_canard){
-	image = spr_bisou_canard // a changer
+	image = spr_bisou_canard 
 	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = "COMME QUOI LE VRAI AMOUR EST PARFOIS CELUI QUI VIENT À NOUS <3 <3 <3"
+	nb_dialogues = 2
+	dialogue[0] = "Ne jamais mordre la main qui te nourrit. L'embrasser langoureusement pour en redemander !"
+	dialogue[1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
 }
 
 with (sc_quincaillerie_tout_niquer){

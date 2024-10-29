@@ -21,7 +21,7 @@
     {"name":"obj_game","order":1,"path":"objects/obj_game/obj_game.yy",},
     {"name":"obj_scene","order":2,"path":"objects/obj_scene/obj_scene.yy",},
     {"name":"spr_bisou_canard","order":8,"path":"sprites/spr_bisou_canard/spr_bisou_canard.yy",},
-    {"name":"spr_bisou_fille","order":18,"path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},
+    {"name":"spr_bisou_fille","order":12,"path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},
     {"name":"spr_date_1","order":2,"path":"sprites/spr_date_1/spr_date_1.yy",},
     {"name":"spr_date_canard","order":15,"path":"sprites/spr_date_canard/spr_date_canard.yy",},
     {"name":"spr_date_demander","order":12,"path":"sprites/spr_date_demander/spr_date_demander.yy",},
@@ -35,7 +35,7 @@
     {"name":"spr_pas_perruque","order":5,"path":"sprites/spr_pas_perruque/spr_pas_perruque.yy",},
     {"name":"spr_serveur","order":7,"path":"sprites/spr_serveur/spr_serveur.yy",},
     {"name":"spr_skinny_dip","order":6,"path":"sprites/spr_skinny_dip/spr_skinny_dip.yy",},
-    {"name":"spr_toilettes","order":6,"path":"sprites/spr_toilettes/spr_toilettes.yy",},
+    {"name":"spr_toilettes","order":11,"path":"sprites/spr_toilettes/spr_toilettes.yy",},
     {"name":"spr_verre_eau","order":7,"path":"sprites/spr_verre_eau/spr_verre_eau.yy",},
   ],
 }

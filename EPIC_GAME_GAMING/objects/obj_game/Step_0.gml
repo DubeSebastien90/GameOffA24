@@ -25,6 +25,25 @@ if press_space && cooldown_space < 0{
 				nb_unlocked +=1
 				unlock[nb_unlocked] = 1
 				break;
+			case sc_etang_skinny_dip:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 2
+				break;
+			case sc_resto_vers_eau:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 3
+			case sc_resto_demasquage:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 4
+				break;
+			case sc_kiss_fille:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 5
+				break;
+			case sc_kiss_canard:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 6
+				break;
 			default:
 				break;
 		}
