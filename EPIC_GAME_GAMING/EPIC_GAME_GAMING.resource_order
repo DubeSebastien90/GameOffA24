@@ -29,6 +29,7 @@
     {"name":"spr_date_explosion","order":1,"path":"sprites/spr_date_explosion/spr_date_explosion.yy",},
     {"name":"spr_date_huile","order":9,"path":"sprites/spr_date_huile/spr_date_huile.yy",},
     {"name":"spr_date_spag","order":10,"path":"sprites/spr_date_spag/spr_date_spag.yy",},
+    {"name":"spr_film","order":17,"path":"sprites/spr_film/spr_film.yy",},
     {"name":"spr_intro_1","order":2,"path":"sprites/spr_intro_1/spr_intro_1.yy",},
     {"name":"spr_intro_2","order":3,"path":"sprites/spr_intro_2/spr_intro_2.yy",},
     {"name":"spr_intro_3","order":4,"path":"sprites/spr_intro_3/spr_intro_3.yy",},

@@ -49,6 +49,7 @@
     {"id":{"name":"spr_date_explosion","path":"sprites/spr_date_explosion/spr_date_explosion.yy",},},
     {"id":{"name":"spr_date_huile","path":"sprites/spr_date_huile/spr_date_huile.yy",},},
     {"id":{"name":"spr_date_spag","path":"sprites/spr_date_spag/spr_date_spag.yy",},},
+    {"id":{"name":"spr_film","path":"sprites/spr_film/spr_film.yy",},},
     {"id":{"name":"spr_intro_1","path":"sprites/spr_intro_1/spr_intro_1.yy",},},
     {"id":{"name":"spr_intro_2","path":"sprites/spr_intro_2/spr_intro_2.yy",},},
     {"id":{"name":"spr_intro_3","path":"sprites/spr_intro_3/spr_intro_3.yy",},},

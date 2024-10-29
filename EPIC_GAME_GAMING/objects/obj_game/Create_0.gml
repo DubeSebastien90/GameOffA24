@@ -130,6 +130,9 @@ sc_kiss_fille = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_quincaillerie_tout_niquer = instance_create_depth(0,0,-1000,obj_scene)
 
+
+
+
 with (sc_restart){
 	image = spr_chambre
 	nb_repliques = 0
@@ -292,6 +295,19 @@ with (sc_quincaillerie_tout_niquer){
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = ""
+}
+
+//film 
+with(sc_film_entree){
+	image = spr_film 
+	nb_repliques = 3
+	nb_dialogues = 3
+	dialogue[0] = "C'est ici que j'habite, c'est pas très grand mais ça serait assez pour deux ;)"
+	dialogue[1] = "Allez, viens prendre une place sur le divan !"
+	dialogue[2] = "Alors on écoute quoi chaton ?"
+	replique[0] = "Quelque chose de romantique comme Titanic !"
+	replique[1] = "On pourrait seulement écouter Netflix et..."
+	replique[2] = "Yes ! On écoute Transformers !"
 }
 
 
