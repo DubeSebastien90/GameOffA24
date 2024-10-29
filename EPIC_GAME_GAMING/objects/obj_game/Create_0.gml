@@ -78,7 +78,7 @@ function setDependances(){
 	//branch
 	
 	sc_etang_canard.next_scene[0] = sc_kiss_fille
-	sc_etang_canard.next_scene[1] = sc_kiss_fille
+	sc_etang_canard.next_scene[1] = sc_kiss_canard
 	
 	
 	sc_etang_skinny_dip.next_scene[0] = sc_restart
@@ -290,14 +290,14 @@ with (sc_etang_skinny_dip){
 }
 
 with (sc_kiss_fille){
-	image = spr_bisou // a changer
+	image = spr_bisou_fille // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Wow... Tu as réussi ! Félicitaions ! "
 }
 
 with (sc_kiss_canard){
-	image = spr_bisou_CANARD // a changer
+	image = spr_bisou_canard // a changer
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "COMME QUOI LE VRAI AMOUR EST PARFOIS CELUI QUI VIENT À NOUS <3 <3 <3"
