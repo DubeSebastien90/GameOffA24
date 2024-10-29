@@ -199,7 +199,7 @@ with (sc_resto_vers_eau){
 	image = spr_verre_eau
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEYHEUHFIAEOFSEAOFIDF *mort soufffrante*"
+	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEEAOFIDF *mort soufffrante*"
 }
 
 with (sc_resto_vers_huile){
@@ -283,7 +283,7 @@ with (sc_kiss_canard){
 	image = spr_bisou_canard 
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Ne jamais mordre la main qui te nourrit. L'embrasser langoureusement pour en redemander !"
+	dialogue[0] = "Ne jamais mordre la main qui te nourrit !"
 	dialogue[1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
 }
 
