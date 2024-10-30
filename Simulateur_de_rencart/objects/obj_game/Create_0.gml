@@ -2,12 +2,16 @@
 nb_unlocked = 0
 unlock[0] = 0
 
+TRICHERIE = true
 
 //setup
 max_cooldown_space = 5
 cooldown_space = 0
 
 scene_actuelle = noone
+more_info = 0
+gaming = false
+returnVal = -1
 
 //affichage
 image = spr_chambre
@@ -21,10 +25,32 @@ replique_actuelle = 0
 replique[0] = ""
 
 
-function setNextScene(scene){
-	scene_actuelle = scene
-	replique_actuelle = 0
-	dialogue_actuel = 0
+function setNextScene(_scene){
+	if _scene.room_minigame == noone{
+		if room != rm_questions{
+			room_goto(rm_questions)
+		}
+		gaming = false
+		scene_actuelle = _scene
+		replique_actuelle = 0
+		dialogue_actuel = 0
+	} else {
+		if _scene == sc_crossyroad_2{
+			if scene_actuelle == sc_quincaillerie{
+				sc_crossyroad_2.next_scene[1] = sc_questionnement
+			} else if replique_actuelle == 0{
+				sc_crossyroad_2.next_scene[1] = sc_etang_entree
+			} else if replique_actuelle == 2{
+				sc_crossyroad_2.next_scene[1] = sc_film_entree
+			}
+		}
+		
+		returnVal = -1
+		gaming = true
+		more_info = _scene.more_info
+		scene_actuelle = _scene
+		room_goto(_scene.room_minigame)
+	}
 }
 
 function setDependances(){
@@ -32,8 +58,12 @@ function setDependances(){
 	//intro
 	sc_intro_1.next_scene[0] = sc_intro_2
 	sc_intro_2.next_scene[0] = sc_intro_3
-	sc_intro_3.next_scene[0] = sc_resto
+	sc_intro_3.next_scene[0] = sc_crossyroad_1
 	
+	sc_crossyroad_1.next_scene[0] = sc_mort_voiture
+	sc_crossyroad_1.next_scene[1] = sc_resto
+	
+	sc_mort_voiture.next_scene[0] = sc_restart
 	//resto
 	sc_resto.next_scene[0] = sc_resto_serveur
 	sc_resto.next_scene[1] = sc_resto_serveur
@@ -62,10 +92,12 @@ function setDependances(){
 	
 	
 	//activités
+	sc_crossyroad_2.next_scene[0] = sc_mort_voiture
+	sc_crossyroad_2.next_scene[1] = noone
 	
-	sc_resto_demande_next_activite.next_scene[0] = sc_etang_entree
+	sc_resto_demande_next_activite.next_scene[0] = sc_crossyroad_2
 	sc_resto_demande_next_activite.next_scene[1] = sc_quincaillerie
-	sc_resto_demande_next_activite.next_scene[2] = sc_film_entree
+	sc_resto_demande_next_activite.next_scene[2] = sc_crossyroad_2
 	
 	//etang
 	
@@ -84,7 +116,7 @@ function setDependances(){
 	
 	//quincaillerie
 	
-	sc_quincaillerie.next_scene[0] = sc_questionnement
+	sc_quincaillerie.next_scene[0] = sc_crossyroad_2
 	
 	sc_questionnement.next_scene[0] = sc_q_rester_calme
 	sc_questionnement.next_scene[1] = sc_q_indigner
@@ -126,6 +158,10 @@ function setDependances(){
 	
 }
 
+//minigames
+sc_crossyroad_1 = instance_create_depth(0,0,-1000,obj_scene)
+sc_crossyroad_2 = instance_create_depth(0,0,-1000,obj_scene)
+
 //scenes
 //intro
 sc_restart = instance_create_depth(0,0,-1000,obj_scene)
@@ -133,6 +169,7 @@ sc_intro_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_intro_2 = instance_create_depth(0,0,-1000,obj_scene)
 sc_intro_3 = instance_create_depth(0,0,-1000,obj_scene)
 
+sc_mort_voiture = instance_create_depth(0,0,-1000,obj_scene)
 //au resto
 sc_resto = instance_create_depth(0,0,-1000,obj_scene)
 sc_resto_explosion = instance_create_depth(0,0,-1000,obj_scene)
@@ -238,6 +275,14 @@ with (sc_intro_3){
 	nb_dialogues = 2
 	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement."
 	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu."
+}
+
+with(sc_mort_voiture){
+	image = spr_intro_1 //a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Il est toujours important de regarder des deux côtés de la rue avant de traverser."
+	dialogue[1] = "Comme quoi, l'amour rend vraiment aveugle..."
 }
 
 with (sc_resto){
@@ -545,6 +590,16 @@ with(sc_f_robot_sex){
 	dialogue[1] = "Allez viens me graisser les tuyaux, mon port USB n'attend que ta clé"
 }
 
+//minigames
+with(sc_crossyroad_1){
+	room_minigame = rm_crossyroad
+	more_info = 0
+}
+
+with(sc_crossyroad_2){
+	room_minigame = rm_crossyroad
+	more_info = 1
+}
 
 setDependances()
 setNextScene(sc_restart)

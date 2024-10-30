@@ -16,3 +16,6 @@ image = noone
 next_scene[0] = noone
 next_scene[1] = noone
 next_scene[2] = noone
+
+room_minigame = noone
+more_info = 0

@@ -3,7 +3,7 @@ press_space = keyboard_check_pressed(vk_space)
 press_up = keyboard_check_pressed(vk_up)
 press_down = keyboard_check_pressed(vk_down)
 
-if scene_actuelle != noone{
+if scene_actuelle != noone && room == rm_questions{
 
 if press_up{
 	replique_actuelle -= 1
@@ -55,4 +55,11 @@ if press_space && cooldown_space < 0{
 }
 cooldown_space -= 1
 
+} else if room != rm_questions {
+	if keyboard_check_pressed(ord("S")){
+		returnVal = 1
+	}
+	if returnVal != -1{
+		setNextScene(scene_actuelle.next_scene[returnVal])
+	}
 }

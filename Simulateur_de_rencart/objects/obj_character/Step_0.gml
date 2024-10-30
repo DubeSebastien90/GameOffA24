@@ -6,15 +6,22 @@ press_up = keyboard_check_pressed(vk_up);
 
 
 if (place_meeting(x, y, obj_car)) {
-	
+	if obj_crossyroad_controller.mort = false{
+		obj_crossyroad_controller.mort = true
+		control = false
+	}
 }
 
 if (obj_crossyroad_controller.level == 1) {
 	if (place_meeting(obj_eve.x, obj_eve.y, obj_car)) {
-		
+		if obj_crossyroad_controller.mort = false{
+			obj_crossyroad_controller.mort = true
+			control = false
+		}
 	}
 }
 
+if control{
 if press_up {
 	if (!place_meeting(x_future, y_future - case_size, obj_wall) and !place_meeting(x_future, y_future - case_size, obj_eve)) {
 		x_prev = x_future;
@@ -47,15 +54,28 @@ if press_right {
 		x_future += case_size;
 	} 
 }
-
-x = lerp(x, x_future, 0.1);
-y = lerp(y, y_future, 0.1);
-
-if (obj_crossyroad_controller.level == 1) {
-	obj_eve.x = lerp(obj_eve.x, x_prev, 0.1);
-obj_eve.y = lerp(obj_eve.y, y_prev, 0.1);
 }
 
-if (place_meeting(x, y, obj_objectif)) {
-	
+x = lerp(x, x_future, 0.2);
+y = lerp(y, y_future, 0.2);
+
+if (obj_crossyroad_controller.level == 1) {
+	obj_eve.x = lerp(obj_eve.x, x_prev, 0.2);
+	obj_eve.y = lerp(obj_eve.y, y_prev, 0.2);
+}
+
+if obj_crossyroad_controller.level == 0{
+	if (place_meeting(x, y, obj_objectif)) {
+		if obj_crossyroad_controller.succes = false{
+			obj_crossyroad_controller.succes = true
+			control = false
+		}
+	}
+} else{
+	if (place_meeting(x, y, obj_objectif) && place_meeting(obj_eve.x,obj_eve.y,obj_objectif)) {
+		if obj_crossyroad_controller.succes = false{
+			obj_crossyroad_controller.succes = true
+			control = false
+		}
+	}
 }

@@ -1,17 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-level = 1;
+cooldown_fin = 60
+
+mort = false
+succes = false
+
+level = obj_game.more_info;
 cooldowns = [];
 lanes = [];
 nb_lanes = 6;
 
-cooldowns[0] = 0;
-cooldowns[1] = 5;
-cooldowns[2] = 10;
-cooldowns[3] = 15;
-cooldowns[4] = 20;
-cooldowns[5] = 25;
+cooldowns[0] = random_range(0,50);
+cooldowns[1] = random_range(0,50);
+cooldowns[2] = random_range(0,50);
+cooldowns[3] = random_range(0,50);
+cooldowns[4] = random_range(0,50);
+cooldowns[5] = random_range(0,50);
 
 
 if level = 0 {

@@ -7,3 +7,5 @@ y_future = y;
 
 x_prev = x;
 y_prev = y - case_size;
+
+control = true

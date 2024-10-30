@@ -1,6 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if mort{
+	if cooldown_fin <= 0{
+	obj_game.returnVal = 0
+	}
+	cooldown_fin --
+}
+
+if succes{
+	if cooldown_fin <= 0{
+	obj_game.returnVal = 1
+	}
+	cooldown_fin --
+}
+
 
 if cooldowns[0] < 0 {
 
@@ -42,7 +56,7 @@ if cooldowns[5] < 0 {
 for (var i = 0; i < nb_lanes; i++) {
 	
 	if cooldowns[i] < 0 {
-		cooldowns[i] = random_range(140, 200);
+		cooldowns[i] = random_range(170, 300);
 	} else {
 		cooldowns[i]--;
 	}
