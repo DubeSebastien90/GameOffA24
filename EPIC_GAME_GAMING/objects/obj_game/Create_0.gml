@@ -2,8 +2,9 @@
 nb_unlocked = 0
 unlock[0] = 0
 
+
 //setup
-max_cooldown_space = 30
+max_cooldown_space = 5
 cooldown_space = 0
 
 scene_actuelle = noone
@@ -83,7 +84,24 @@ function setDependances(){
 	
 	//quincaillerie
 	
-	//sc_quincaillerie.next_scene[0] = sc_rester_calme
+	sc_quincaillerie.next_scene[0] = sc_questionnement
+	
+	sc_questionnement.next_scene[0] = sc_q_rester_calme
+	sc_questionnement.next_scene[1] = sc_q_indigner
+	sc_questionnement.next_scene[2] = sc_q_bagarre_commis
+	
+	sc_q_rester_calme.next_scene[0] = sc_q_se_promener
+	
+	sc_q_indigner.next_scene[0] = sc_q_choix_apres_indign
+	
+	sc_q_choix_apres_indign.next_scene[0] = sc_q_se_promener
+	sc_q_choix_apres_indign.next_scene[1] = sc_q_chercher_arme
+	
+	sc_q_se_promener.next_scene[0] = sc_q_combat_femme
+	sc_q_se_promener.next_scene[1] = sc_q_chercher_arme
+	
+	sc_q_chercher_arme.next_scene[0] = sc_q_chercher_arme2
+	sc_q_chercher_arme2.next_scene[0] = sc_q_combat_fusil
 	
 }
 
@@ -129,18 +147,29 @@ sc_kiss_fille = instance_create_depth(0,0,-1000,obj_scene)
 
 
 //quicaillerie
+sc_questionnement = instance_create_depth(0,0,-1000,obj_scene)
+
 sc_q_rester_calme = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_indigner = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_choix_apres_indign = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_q_perdre_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_gagner_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_q_se_promener = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_chercher_arme = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_chercher_arme2 = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_q_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_perdre_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gsgner_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_perdre_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gagner_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 
 
 
@@ -180,8 +209,8 @@ with (sc_resto){
 	image = spr_date_1
 	nb_repliques = 3
 	nb_dialogues = 2
-	replique[0] = "Merci, je le sais déjà."
-	replique[1] = "Toi aussi, tu es très charmante."
+	replique[0] = "Merci, c'est très gentil"
+	replique[1] = "Toi aussi, tu es très charmante"
 	replique[2] = "*Imploser*"
 	dialogue[0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
 	dialogue[1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
@@ -275,7 +304,7 @@ with (sc_etang_canard){
 	nb_dialogues = 1
 	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... UwU "
 	replique[0] = "L'embrasser"
-	replique[1] = "Embrasser le canard."
+	replique[1] = "Embrasser le canard"
 }
 
 with (sc_etang_skinny_dip){
@@ -304,17 +333,79 @@ with (sc_kiss_canard){
 //quicaillerie
 with(sc_quincaillerie){
 	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 4
+	dialogue[0] = "Parfait, j'avais quelques comissions à faire."
+	dialogue[1] = "Ma bicyclète est brisée, je t'emmène à la quicaillerie."
+	dialogue[2] = "QUOI? T'ES JAMAIS ALLÉ À LA QUICAILLERIE ?!?!";
+	dialogue[3] = "Suis-moi je vais touuuuut te montrer.";
+}
+
+with(sc_questionnement){
+	image = spr_intro_1 // a changer
 	nb_repliques = 3
-	nb_dialogues = 3
-	dialogue[0] = "Parfait, j'avais quelques comissions à faire"
+	nb_dialogues = 4
+	dialogue[0] = "Mais... c'est un cimetière intérieur cet endroit."
+	dialogue[1] = "Ce sont les parties du corps de tous mes amis robots !"
+	dialogue[2] = "Je ne veux pas compromettre mon identité, mais c'est beaucoup trop."
+	dialogue[3] = "Que faire ???"
+	replique[0] = "Rester calme"
+	replique[1] = "S'indigner"
+	replique[2] = "Battre le commis"
 }
 
 
 with (sc_q_rester_calme){
 	image = spr_intro_1 // a changer
 	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0] = ""
+	nb_dialogues = 2
+	dialogue[0] = "Est-ce que tout va bien mon chou ?"
+	dialogue[1] = "Suis moi, je vais t'emmener dans mon coin favori !"
+}
+
+with(sc_q_indigner){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 3
+	dialogue[0] = "C'est n'importe quoi cet endroit Ève !"
+	dialogue[1] = "Je me sens très mal à l'aise entouré de toutes ces... pièces"
+	dialogue[2] = "Je veux qu'on sorte d'ici tout de suite."
+}
+
+with(sc_q_choix_apres_indign){
+	image = spr_intro_1 // a changer
+	nb_repliques = 2
+	nb_dialogues = 2
+	dialogue[0] = "Je ne comprends pas du tout de quoi tu parles..."
+	dialogue[1] = "Tu n'a pas à t'inquiéter, suis moi je vais te montrer mon coin favori !"
+	replique[0] = "Bon... d'accord tu as raison"
+	replique[1] = "Jamais de la vie ! *Chercher une arme*"
+}
+
+with(sc_q_se_promener){
+	image = spr_intro_1 // a changer
+	nb_repliques = 2
+	nb_dialogues = 2
+	dialogue[0] = "Voici l'allée des marteaux et des outils à soudure !"
+	dialogue[1] = "J'aime trop cogner des clous et briser du métal comme passe temps !"
+	replique[0] = "Glups... Supeeeer..."
+	replique[1] = "C'est trop pour moi ! *Chercher une arme*"
+}
+
+with(sc_q_chercher_arme){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Il doit bien avoir quelque chose de dangereux dans ce sacré magasin"
+	dialogue[1] = "PARFAIT! Un vrai de vrai pistolet tueur !"
+}
+
+with(sc_q_chercher_arme2){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "EH TOI ! QUE FAIS TU AVEC UN VRAI DE VRAI PISTOLET TUEUR DANS CE MAGASIN"
+	dialogue[1] = "TU NE SORTIRAS PAS D'ICI VIVANT !"
 }
 
 //film 

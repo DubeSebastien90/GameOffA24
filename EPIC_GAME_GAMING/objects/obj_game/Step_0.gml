@@ -32,6 +32,7 @@ if press_space && cooldown_space < 0{
 			case sc_resto_vers_eau:
 				nb_unlocked +=1
 				unlock[nb_unlocked] = 3
+				break;
 			case sc_resto_demasquage:
 				nb_unlocked +=1
 				unlock[nb_unlocked] = 4
