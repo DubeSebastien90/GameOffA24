@@ -45,6 +45,26 @@ if press_space && cooldown_space < 0{
 				nb_unlocked +=1
 				unlock[nb_unlocked] = 6
 				break;
+			case sc_f_bateau:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 7
+				break;
+			case sc_f_robot_ending_3:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 8
+				break;
+			case sc_f_dog:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 9
+				break;
+			case sc_f_robot_sex:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 10
+				break;
+			case sc_mort_voiture:
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 11
+				break;
 			default:
 				break;
 		}
