@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite22_1",
-    "path":"sprites/Sprite22_1/Sprite22_1.yy",
+    "name":"spr_walle",
+    "path":"sprites/spr_walle/spr_walle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

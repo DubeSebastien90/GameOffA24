@@ -56,12 +56,12 @@ if press_right {
 }
 }
 
-x = lerp(x, x_future, 0.2);
-y = lerp(y, y_future, 0.2);
+x = lerp(x, x_future, 0.3);
+y = lerp(y, y_future, 0.3);
 
 if (obj_crossyroad_controller.level == 1) {
-	obj_eve.x = lerp(obj_eve.x, x_prev, 0.2);
-	obj_eve.y = lerp(obj_eve.y, y_prev, 0.2);
+	obj_eve.x = lerp(obj_eve.x, x_prev, 0.3);
+	obj_eve.y = lerp(obj_eve.y, y_prev, 0.3);
 }
 
 if obj_crossyroad_controller.level == 0{

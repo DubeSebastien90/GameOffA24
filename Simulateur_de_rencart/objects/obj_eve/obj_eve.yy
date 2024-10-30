@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite24",
-    "path":"sprites/Sprite24/Sprite24.yy",
+    "name":"spr_eve",
+    "path":"sprites/spr_eve/spr_eve.yy",
   },
   "spriteMaskId":null,
   "visible":true,
