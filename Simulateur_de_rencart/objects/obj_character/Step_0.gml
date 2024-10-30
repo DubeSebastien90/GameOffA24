@@ -9,6 +9,7 @@ if (place_meeting(x, y, obj_car)) {
 	if obj_crossyroad_controller.mort = false{
 		obj_crossyroad_controller.mort = true
 		control = false
+		mort = true
 	}
 }
 
@@ -17,6 +18,7 @@ if (obj_crossyroad_controller.level == 1) {
 		if obj_crossyroad_controller.mort = false{
 			obj_crossyroad_controller.mort = true
 			control = false
+			mortEve = true
 		}
 	}
 }
@@ -56,12 +58,21 @@ if press_right {
 }
 }
 
+
+if mort = true{
+	rot += 5
+} else{
 x = lerp(x, x_future, 0.3);
 y = lerp(y, y_future, 0.3);
+}
 
 if (obj_crossyroad_controller.level == 1) {
-	obj_eve.x = lerp(obj_eve.x, x_prev, 0.3);
-	obj_eve.y = lerp(obj_eve.y, y_prev, 0.3);
+	if mortEve = true{
+		rotEve += 5
+	} else{
+		obj_eve.x = lerp(obj_eve.x, x_prev, 0.3);
+		obj_eve.y = lerp(obj_eve.y, y_prev, 0.3);
+	}
 }
 
 if obj_crossyroad_controller.level == 0{

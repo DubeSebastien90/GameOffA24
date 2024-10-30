@@ -148,7 +148,8 @@ function setDependances(){
 	
 	sc_f_transformers.next_scene[0] = sc_f_robot_ending_1
 	sc_f_robot_ending_1.next_scene[0] = sc_f_robot_ending_2
-	sc_f_robot_ending_2.next_scene[0] = sc_restart
+	sc_f_robot_ending_2.next_scene[0] = sc_f_robot_ending_3
+	sc_f_robot_ending_3.next_scene[0] = sc_restart
 	
 	sc_f_pudique.next_scene[0] = sc_f_dog
 	sc_f_dog.next_scene[0] = sc_restart
@@ -241,6 +242,7 @@ sc_f_bateau = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_f_robot_ending_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_f_robot_ending_2 = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_robot_ending_3 = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_f_dog = instance_create_depth(0,0,-1000,obj_scene)
 sc_f_robot_sex = instance_create_depth(0,0,-1000,obj_scene)
@@ -518,7 +520,7 @@ with(sc_f_bateau){
 }
 
 with(sc_f_transformers){
-	image = spr_intro_1 // a changer
+	image = spr_appeure
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Zute... j'aurais du penser à choisir un film un peu moins épeurant..."
@@ -526,7 +528,7 @@ with(sc_f_transformers){
 }
 
 with(sc_f_robot_ending_1){
-	image = spr_intro_1 // a changer
+	image = spr_transform_1
 	nb_repliques = 0
 	nb_dialogues = 5
 	dialogue[0] = "Pourquoi tu fais cette façe beauté ?"
@@ -537,12 +539,20 @@ with(sc_f_robot_ending_1){
 }
 
 with(sc_f_robot_ending_2){
-	image = spr_intro_1 // a changer
+	image = spr_transform_2
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "Optimus Prime, commandant des autobots, groupe d'héroïques robots extraterrestres..."
 	dialogue[1] = "... capables de se tranformer en divers véhicules !"
 	dialogue[2] = "Viens habiter la façe cachée de la lune avec moi !"
+}
+
+with(sc_f_robot_ending_3){
+	image = spr_transform_3
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Nous sommes bien mieux loin de ce merdier !"
+	dialogue[1] = "Fondons une famille et colonisons l'univers !"
 }
 
 with(sc_f_netflix){
@@ -552,7 +562,7 @@ with(sc_f_netflix){
 	dialogue[0] = "Ouuh j'adore ton idée ;)"
 	dialogue[1] = "Dans ce cas, on passera pas par tous les chemins qui mènent à Rome."
 	dialogue[2] = "Déshabilles toi grand fou !"
-	replique[0] = "NON ! Je dois garder ma couverture !"
+	replique[0] = "NON ! Je dois garder ma couverture de robot !"
 	replique[1] = "Allez poupée ! Viens à moi !"
 }
 

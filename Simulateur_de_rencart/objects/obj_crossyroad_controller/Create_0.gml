@@ -28,9 +28,9 @@ if level = 0 {
 	lanes[4] = 192;
 	lanes[5] = 208;
 
-	instance_create_depth(0, 64, -100, obj_character);
+	instance_create_depth(0, 64, -90, obj_character);
 
-	with(instance_create_depth(240, 48, -100, obj_objectif)) {
+	with(instance_create_depth(240, 48, -80, obj_objectif)) {
 	
 		image_xscale = 2;
 		image_yscale = 4;
@@ -75,10 +75,10 @@ if level = 0 {
 	lanes[4] = 176;
 	lanes[5] = 192;
 	
-	instance_create_depth(256, 64, -100, obj_character)
-	instance_create_depth(256, 48, -100, obj_eve)
+	instance_create_depth(256, 64, -90, obj_character)
+	instance_create_depth(256, 48, -90, obj_eve)
 	
-	with(instance_create_depth(0, 32, -100, obj_objectif)) {
+	with(instance_create_depth(0, 32, -80, obj_objectif)) {
 	
 		image_xscale = 2;
 		image_yscale = 5;
