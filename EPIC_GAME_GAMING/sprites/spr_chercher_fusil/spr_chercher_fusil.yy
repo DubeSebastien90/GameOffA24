@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_date_huile",
+  "%Name":"spr_chercher_fusil",
   "bboxMode":0,
   "bbox_bottom":199,
   "bbox_left":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"ba73d799-d08d-4192-90b7-20730f3d25ce","name":"ba73d799-d08d-4192-90b7-20730f3d25ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"62c8a0cb-ee30-44b4-b10c-7cc82d8ef3db","name":"62c8a0cb-ee30-44b4-b10c-7cc82d8ef3db","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":200,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"28d09f2f-42c6-4025-b722-e26d2a5761af","blendMode":0,"displayName":"default","isLocked":false,"name":"28d09f2f-42c6-4025-b722-e26d2a5761af","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"cb60bc14-a0f0-49fa-b3f3-6dc4faeac62b","blendMode":0,"displayName":"default","isLocked":false,"name":"cb60bc14-a0f0-49fa-b3f3-6dc4faeac62b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_date_huile",
+  "name":"spr_chercher_fusil",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_date_huile",
+    "%Name":"spr_chercher_fusil",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_date_huile",
+    "name":"spr_chercher_fusil",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ba73d799-d08d-4192-90b7-20730f3d25ce","path":"sprites/spr_date_huile/spr_date_huile.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9e0331bd-00d8-49dd-8be5-00f0b854eeb2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"62c8a0cb-ee30-44b4-b10c-7cc82d8ef3db","path":"sprites/spr_chercher_fusil/spr_chercher_fusil.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"97568290-3e89-4500-8cbe-28b68a498e59","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

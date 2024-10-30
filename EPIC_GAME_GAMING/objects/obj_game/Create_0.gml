@@ -171,6 +171,7 @@ sc_q_gsgner_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_perdre_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_gagner_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 
+//film
 
 
 with (sc_restart){
@@ -332,7 +333,7 @@ with (sc_kiss_canard){
 
 //quicaillerie
 with(sc_quincaillerie){
-	image = spr_intro_1 // a changer
+	image = spr_expl_quincaillerie
 	nb_repliques = 0
 	nb_dialogues = 4
 	dialogue[0] = "Parfait, j'avais quelques comissions à faire."
@@ -342,7 +343,7 @@ with(sc_quincaillerie){
 }
 
 with(sc_questionnement){
-	image = spr_intro_1 // a changer
+	image = spr_vue_quinc
 	nb_repliques = 3
 	nb_dialogues = 4
 	dialogue[0] = "Mais... c'est un cimetière intérieur cet endroit."
@@ -356,7 +357,7 @@ with(sc_questionnement){
 
 
 with (sc_q_rester_calme){
-	image = spr_intro_1 // a changer
+	image = spr_rassure_quinc
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Est-ce que tout va bien mon chou ?"
@@ -364,7 +365,7 @@ with (sc_q_rester_calme){
 }
 
 with(sc_q_indigner){
-	image = spr_intro_1 // a changer
+	image = spr_indigner
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "C'est n'importe quoi cet endroit Ève !"
@@ -373,7 +374,7 @@ with(sc_q_indigner){
 }
 
 with(sc_q_choix_apres_indign){
-	image = spr_intro_1 // a changer
+	image = spr_choix_apres_indigner
 	nb_repliques = 2
 	nb_dialogues = 2
 	dialogue[0] = "Je ne comprends pas du tout de quoi tu parles..."
@@ -383,7 +384,7 @@ with(sc_q_choix_apres_indign){
 }
 
 with(sc_q_se_promener){
-	image = spr_intro_1 // a changer
+	image = spr_se_promener
 	nb_repliques = 2
 	nb_dialogues = 2
 	dialogue[0] = "Voici l'allée des marteaux et des outils à soudure !"
@@ -393,7 +394,7 @@ with(sc_q_se_promener){
 }
 
 with(sc_q_chercher_arme){
-	image = spr_intro_1 // a changer
+	image = spr_chercher_fusil
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Il doit bien avoir quelque chose de dangereux dans ce sacré magasin"
@@ -401,7 +402,7 @@ with(sc_q_chercher_arme){
 }
 
 with(sc_q_chercher_arme2){
-	image = spr_intro_1 // a changer
+	image = spr_commis_threat
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "EH TOI ! QUE FAIS TU AVEC UN VRAI DE VRAI PISTOLET TUEUR DANS CE MAGASIN"
