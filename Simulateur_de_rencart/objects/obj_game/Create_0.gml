@@ -556,7 +556,7 @@ with(sc_f_robot_ending_3){
 }
 
 with(sc_f_netflix){
-	image = spr_intro_1 // a changer
+	image = spr_film_sexe
 	nb_repliques = 2
 	nb_dialogues = 3
 	dialogue[0] = "Ouuh j'adore ton idée ;)"
@@ -567,7 +567,7 @@ with(sc_f_netflix){
 }
 
 with(sc_f_pudique){
-	image = spr_intro_1 // a changer
+	image = spr_film_pudique
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "Quoi !?!?!?!? Après toute cette soirée tu veux même pas de moi ?"
@@ -576,7 +576,7 @@ with(sc_f_pudique){
 }
 
 with(sc_f_dog){
-	image = spr_intro_1 // a changer
+	image =spr_film_chien
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "SCOOBY-DOO ! ATTAQUE"
@@ -584,7 +584,7 @@ with(sc_f_dog){
 }
 
 with(sc_f_naked){
-	image = spr_intro_1 // a changer
+	image = spr_film_peau_metal
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "Oh oui enlèves ta chemise beau gosse !"
@@ -593,7 +593,7 @@ with(sc_f_naked){
 }
 
 with(sc_f_robot_sex){
-	image = spr_intro_1 // a changer
+	image = spr_film_robot_sex
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Tu es un robot toi aussi ! Je suis tellement soulagée"
