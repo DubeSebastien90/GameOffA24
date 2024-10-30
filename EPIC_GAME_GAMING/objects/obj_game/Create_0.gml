@@ -103,6 +103,27 @@ function setDependances(){
 	sc_q_chercher_arme.next_scene[0] = sc_q_chercher_arme2
 	sc_q_chercher_arme2.next_scene[0] = sc_q_combat_fusil
 	
+	// film
+	sc_film_entree.next_scene[0] = sc_f_titanic
+	sc_film_entree.next_scene[1] = sc_f_netflix
+	sc_film_entree.next_scene[2] = sc_f_transformers
+	
+	sc_f_titanic.next_scene[0] = sc_f_bateau
+	sc_f_bateau.next_scene[0] = sc_restart
+	
+	sc_f_netflix.next_scene[0] = sc_f_pudique
+	sc_f_netflix.next_scene[1] = sc_f_naked
+	
+	sc_f_transformers.next_scene[0] = sc_f_robot_ending_1
+	sc_f_robot_ending_1.next_scene[0] = sc_f_robot_ending_2
+	sc_f_robot_ending_2.next_scene[0] = sc_restart
+	
+	sc_f_pudique.next_scene[0] = sc_f_dog
+	sc_f_dog.next_scene[0] = sc_restart
+	
+	sc_f_naked.next_scene[0] = sc_f_robot_sex
+	sc_f_robot_sex.next_scene[0] = sc_restart
+	
 }
 
 //scenes
@@ -172,7 +193,20 @@ sc_q_perdre_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_gagner_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 
 //film
+sc_f_titanic = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_netflix = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_transformers = instance_create_depth(0,0,-1000,obj_scene)
 
+sc_f_pudique = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_naked = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_f_bateau = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_f_robot_ending_1 = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_robot_ending_2 = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_f_dog = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_robot_sex = instance_create_depth(0,0,-1000,obj_scene)
 
 with (sc_restart){
 	image = spr_chambre
@@ -420,6 +454,95 @@ with(sc_film_entree){
 	replique[0] = "Quelque chose de romantique comme Titanic !"
 	replique[1] = "On pourrait seulement écouter Netflix et..."
 	replique[2] = "Yes ! On écoute Transformers !"
+}
+
+with(sc_f_titanic){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Oh trop bien on va passer un troooop bon moment !"
+	dialogue[1] = "Errrmmm c'est quoi le bruit qu'on entend ?"
+}
+
+with(sc_f_bateau){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "HOOOONK HOOONK MOTHERTRUCKERS !"
+	dialogue[1] = "OH LA VACHE MAMAN !"
+}
+
+with(sc_f_transformers){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Zute... j'aurais du penser à choisir un film un peu moins épeurant..."
+	dialogue[1] = "Toute cette violence... envers mes chers frères..."
+}
+
+with(sc_f_robot_ending_1){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 5
+	dialogue[0] = "Pourquoi tu fais cette façe beauté ?"
+	dialogue[1] = "Toi aussi... ça te fait peur? Je crois savoir pourquoi..."
+	dialogue[2] = "Tu sais garder un secret ? De toute façon tu l'as sûrement déjà deviné..."
+	dialogue[3] = "..."
+	dialogue[4] = "Je suis en réalité "
+}
+
+with(sc_f_robot_ending_2){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 3
+	dialogue[0] = "Optimus Prime, commandant des autobots, groupe d'héroïques robots extraterrestres..."
+	dialogue[1] = "... capables de se tranformer en divers véhicules !"
+	dialogue[2] = "Viens habiter la façe cachée de la lune avec moi !"
+}
+
+with(sc_f_netflix){
+	image = spr_intro_1 // a changer
+	nb_repliques = 2
+	nb_dialogues = 3
+	dialogue[0] = "Ouuh j'adore ton idée ;)"
+	dialogue[1] = "Dans ce cas, on passera pas par tous les chemins qui mènent à Rome."
+	dialogue[2] = "Déshabilles toi grand fou !"
+	replique[0] = "NON ! Je dois garder ma couverture !"
+	replique[1] = "Allez poupée ! Viens à moi !"
+}
+
+with(sc_f_pudique){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 3
+	dialogue[0] = "Quoi !?!?!?!? Après toute cette soirée tu veux même pas de moi ?"
+	dialogue[1] = "C'est n'importe quoi ! JE TE DÉTESTEEEEE"
+	dialogue[2] = "Tu vas le regretter..."
+}
+
+with(sc_f_dog){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "SCOOBY-DOO ! ATTAQUE"
+	dialogue[1] = "AAAAAAHH AHHHH BZZT DZZ POW BIM DZZZ"
+}
+
+with(sc_f_naked){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 3
+	dialogue[0] = "Oh oui enlèves ta chemise beau gosse !"
+	dialogue[1] = "Ermm... pourquoi ta peau est toute grise ? Et où sont passés tes cheveux !"
+	dialogue[2] = "Ne me dit pas que... non c'est trop beau pour être vrai !"
+}
+
+with(sc_f_robot_sex){
+	image = spr_intro_1 // a changer
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Tu es un robot toi aussi ! Je suis tellement soulagée"
+	dialogue[1] = "Allez viens me graisser les tuyaux, mon port USB n'attend que ta clé"
 }
 
 
