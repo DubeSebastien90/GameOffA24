@@ -63,6 +63,8 @@
     {"id":{"name":"spr_se_promener","path":"sprites/spr_se_promener/spr_se_promener.yy",},},
     {"id":{"name":"spr_serveur","path":"sprites/spr_serveur/spr_serveur.yy",},},
     {"id":{"name":"spr_skinny_dip","path":"sprites/spr_skinny_dip/spr_skinny_dip.yy",},},
+    {"id":{"name":"spr_titanic_1","path":"sprites/spr_titanic_1/spr_titanic_1.yy",},},
+    {"id":{"name":"spr_titanic_2","path":"sprites/spr_titanic_2/spr_titanic_2.yy",},},
     {"id":{"name":"spr_toilettes","path":"sprites/spr_toilettes/spr_toilettes.yy",},},
     {"id":{"name":"spr_verre_eau","path":"sprites/spr_verre_eau/spr_verre_eau.yy",},},
     {"id":{"name":"spr_vue_quinc","path":"sprites/spr_vue_quinc/spr_vue_quinc.yy",},},

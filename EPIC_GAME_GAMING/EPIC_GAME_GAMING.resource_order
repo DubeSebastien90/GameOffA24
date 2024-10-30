@@ -42,6 +42,8 @@
     {"name":"spr_se_promener","order":10,"path":"sprites/spr_se_promener/spr_se_promener.yy",},
     {"name":"spr_serveur","order":1,"path":"sprites/spr_serveur/spr_serveur.yy",},
     {"name":"spr_skinny_dip","order":6,"path":"sprites/spr_skinny_dip/spr_skinny_dip.yy",},
+    {"name":"spr_titanic_1","order":18,"path":"sprites/spr_titanic_1/spr_titanic_1.yy",},
+    {"name":"spr_titanic_2","order":19,"path":"sprites/spr_titanic_2/spr_titanic_2.yy",},
     {"name":"spr_toilettes","order":11,"path":"sprites/spr_toilettes/spr_toilettes.yy",},
     {"name":"spr_verre_eau","order":7,"path":"sprites/spr_verre_eau/spr_verre_eau.yy",},
     {"name":"spr_vue_quinc","order":7,"path":"sprites/spr_vue_quinc/spr_vue_quinc.yy",},

@@ -457,7 +457,7 @@ with(sc_film_entree){
 }
 
 with(sc_f_titanic){
-	image = spr_intro_1 // a changer
+	image =spr_titanic_1
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Oh trop bien on va passer un troooop bon moment !"
@@ -465,7 +465,7 @@ with(sc_f_titanic){
 }
 
 with(sc_f_bateau){
-	image = spr_intro_1 // a changer
+	image = spr_titanic_2
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "HOOOONK HOOONK MOTHERTRUCKERS !"
