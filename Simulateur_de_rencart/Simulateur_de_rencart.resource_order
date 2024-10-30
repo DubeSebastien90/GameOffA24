@@ -34,6 +34,7 @@
     {"name":"rm_fight","order":2,"path":"rooms/rm_fight/rm_fight.yy",},
     {"name":"spr_appeure","order":19,"path":"sprites/spr_appeure/spr_appeure.yy",},
     {"name":"spr_background","order":6,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"spr_barre_vie","order":3,"path":"sprites/spr_barre_vie/spr_barre_vie.yy",},
     {"name":"spr_bisou_canard","order":7,"path":"sprites/spr_bisou_canard/spr_bisou_canard.yy",},
     {"name":"spr_bisou_fille","order":11,"path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},
     {"name":"spr_car","order":5,"path":"sprites/spr_car/spr_car.yy",},

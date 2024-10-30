@@ -56,6 +56,7 @@
     {"id":{"name":"spr_appeure","path":"sprites/spr_appeure/spr_appeure.yy",},},
     {"id":{"name":"spr_background_fight","path":"sprites/spr_background_fight/spr_background_fight.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
+    {"id":{"name":"spr_barre_vie","path":"sprites/spr_barre_vie/spr_barre_vie.yy",},},
     {"id":{"name":"spr_bisou_canard","path":"sprites/spr_bisou_canard/spr_bisou_canard.yy",},},
     {"id":{"name":"spr_bisou_fille","path":"sprites/spr_bisou_fille/spr_bisou_fille.yy",},},
     {"id":{"name":"spr_car","path":"sprites/spr_car/spr_car.yy",},},
@@ -107,8 +108,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_fight","path":"rooms/rm_fight/rm_fight.yy",},},
-    {"roomId":{"name":"rm_crossyroad","path":"rooms/rm_crossyroad/rm_crossyroad.yy",},},
     {"roomId":{"name":"rm_questions","path":"rooms/rm_questions/rm_questions.yy",},},
+    {"roomId":{"name":"rm_crossyroad","path":"rooms/rm_crossyroad/rm_crossyroad.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
