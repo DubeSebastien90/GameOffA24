@@ -56,7 +56,7 @@ if cooldowns[5] < 0 {
 for (var i = 0; i < nb_lanes; i++) {
 	
 	if cooldowns[i] < 0 {
-		cooldowns[i] = random_range(120, 250);
+		cooldowns[i] = random_range(170, 270);
 	} else {
 		cooldowns[i]--;
 	}
