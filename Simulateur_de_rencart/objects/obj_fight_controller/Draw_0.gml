@@ -2,7 +2,7 @@ draw_set_alpha(0.7)
 draw_set_color(c_black)
 draw_set_font(fnt_pixel)
 draw_rectangle(3,1,85,21,false)
-draw_rectangle(room_width-3,1,room_width-(string_length(e_name)*5) - 1,21,false)
+draw_rectangle(room_width-3,1,room_width-(string_length(e_name)*5.5) - 1,21,false)
 draw_set_alpha(1)
 
 

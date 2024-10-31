@@ -75,7 +75,7 @@ function setScenario(_info){
 		m_sprite = spr_moi_poing
 		m_name = "Moi"
 
-		e_hp = 160
+		e_hp = 100
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
 		e_dmg_max = 15
