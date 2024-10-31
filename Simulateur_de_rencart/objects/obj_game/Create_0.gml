@@ -524,6 +524,14 @@ with(sc_q_combat_femme){
 	dialogue[4] = "Viens ici que je te démembres et te vende au plus offrant !"
 }
 
+with(sc_q_perdre_bagarre_commis){
+	image = spr_intro_1 //a changer
+}
+
+with(sc_q_gagner_bagarre_commis){
+	image = spr_intro_1 //a changer
+}
+
 //film 
 with(sc_film_entree){
 	image = spr_film 
