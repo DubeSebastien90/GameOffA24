@@ -52,9 +52,9 @@ if charFight == 1 && stateFight == 0{
 } else{
 	if fighting == 0{
 		m_ind = 3
-		e_ind = 0
+		e_ind = 2
 	} else{
-		m_ind = 0
+		m_ind = 2
 		e_ind = 3
 	}
 	cooldownFin --

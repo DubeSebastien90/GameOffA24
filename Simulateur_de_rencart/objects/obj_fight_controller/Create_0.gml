@@ -5,7 +5,7 @@ icon_ind = 0
 icon_pos = room_width/2
 
 fighting = -1
-cooldownFin = 60
+cooldownFin = 90
 
 m_hp = 0
 m_hp_live = 0
@@ -41,14 +41,14 @@ function setScenario(_info){
 		m_hp_live = m_hp
 		m_hp_buff = m_hp
 		m_dmg_max = 30
-		m_sprite = spr_moi_fight
+		m_sprite = spr_moi_poing
 		m_name = "Moi"
 
 		e_hp = 100
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
 		e_dmg_max = 20
-		e_sprite = spr_commis_fight
+		e_sprite = spr_commis_poing
 		e_name = "Commis de quincaillerie"
 	}
 	if scenario == 1{
@@ -56,7 +56,7 @@ function setScenario(_info){
 		m_hp_live = m_hp
 		m_hp_buff = m_hp
 		m_dmg_max = 50
-		m_sprite = spr_moi_fight
+		m_sprite = spr_moi_poing
 		m_name = "Moi"
 		icon_ind = 1
 
@@ -64,7 +64,7 @@ function setScenario(_info){
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
 		e_dmg_max = 40
-		e_sprite = spr_commis_fight //commis avec robot
+		e_sprite = spr_commis_poing //commis avec robot
 		e_name = "Commis de quincaillerie"
 	}
 	if scenario == 2{
@@ -72,14 +72,14 @@ function setScenario(_info){
 		m_hp_live = m_hp
 		m_hp_buff = m_hp
 		m_dmg_max = 30
-		m_sprite = spr_moi_fight
+		m_sprite = spr_moi_poing
 		m_name = "Moi"
 
 		e_hp = 160
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
 		e_dmg_max = 15
-		e_sprite = spr_commis_fight //eve
+		e_sprite = spr_commis_poing //eve
 		e_name = "Ève - tueuse de robots"
 	}
 }

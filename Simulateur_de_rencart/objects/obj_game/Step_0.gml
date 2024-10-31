@@ -19,6 +19,7 @@ if press_space && cooldown_space < 0{
 	cooldown_space = max_cooldown_space
 	if dialogue_actuel < scene_actuelle.nb_dialogues-1{
 		dialogue_actuel += 1
+		replique_actuelle = 0
 	} else {
 		switch(scene_actuelle){
 			case sc_resto_explosion:
