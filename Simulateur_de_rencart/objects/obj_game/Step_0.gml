@@ -76,7 +76,7 @@ if press_space && cooldown_space < 0{
 cooldown_space -= 1
 
 } else if room != rm_questions {
-	if keyboard_check_pressed(ord("S")){
+	if keyboard_check_pressed(ord("S")) && TRICHERIE = true{
 		returnVal = 1
 	}
 	if returnVal != -1{

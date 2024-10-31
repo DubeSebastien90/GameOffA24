@@ -1,0 +1,7 @@
+draw_set_font(fnt_pixel)
+draw_set_color(color)
+draw_set_halign(fa_center)
+draw_set_valign(fa_center)
+draw_set_alpha(image_alpha)
+draw_text_transformed(x,y,text,0.3*scale,0.3*scale,rot)
+draw_set_alpha(1)

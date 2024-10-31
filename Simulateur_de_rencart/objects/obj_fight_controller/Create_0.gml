@@ -1,4 +1,11 @@
-scenario = 0
+scenario = obj_game.more_info
+temps = random_range(0,360)
+
+icon_ind = 0
+icon_pos = room_width/2
+
+fighting = -1
+cooldownFin = 60
 
 m_hp = 0
 m_hp_live = 0
@@ -49,14 +56,15 @@ function setScenario(_info){
 		m_hp_live = m_hp
 		m_hp_buff = m_hp
 		m_dmg_max = 50
-		m_sprite = noone
+		m_sprite = spr_moi_fight
 		m_name = "Moi"
+		icon_ind = 1
 
 		e_hp = 100
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
 		e_dmg_max = 40
-		e_sprite = noone
+		e_sprite = spr_commis_fight //commis avec robot
 		e_name = "Commis de quincaillerie"
 	}
 	if scenario == 2{
@@ -67,11 +75,11 @@ function setScenario(_info){
 		m_sprite = spr_moi_fight
 		m_name = "Moi"
 
-		e_hp = 100
+		e_hp = 160
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
-		e_dmg_max = 20
-		e_sprite = noone
+		e_dmg_max = 15
+		e_sprite = spr_commis_fight //eve
 		e_name = "Ève - tueuse de robots"
 	}
 }

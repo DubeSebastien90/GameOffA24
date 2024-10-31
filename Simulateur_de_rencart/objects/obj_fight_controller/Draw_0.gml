@@ -21,3 +21,9 @@ draw_text_transformed(room_width-5,1,e_name,0.5,0.5,0)
 draw_sprite(e_sprite,e_ind,0,0)
 draw_sprite_ext(spr_barre_vie,0,room_width-5,10,-1,1,0,c_white,1)
 draw_sprite_ext(spr_barre_vie,1,room_width-5,10,-max(0,e_hp_buff/e_hp),1,0,c_white,1)
+
+if charFight == 0{
+	draw_sprite_ext(spr_barre,0,room_width/2, room_height*0.9,25,1,0,c_white,1)
+	draw_sprite(spr_indic,0,room_width/2,room_height*0.9)
+	draw_sprite(spr_icon,icon_ind,icon_pos,room_height*0.9+0.5)
+}
