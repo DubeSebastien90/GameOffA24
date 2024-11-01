@@ -19,41 +19,51 @@ if press_space && cooldown_space < 0{
 	cooldown_space = max_cooldown_space
 	if dialogue_actuel < scene_actuelle.nb_dialogues-1{
 		dialogue_actuel += 1
-		replique_actuelle = 0
 	} else {
 		switch(scene_actuelle){
 			case sc_resto_explosion:
-				unlock[0] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 1
 				break;
 			case sc_etang_skinny_dip:
-				unlock[1] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 2
 				break;
 			case sc_resto_vers_eau:
-				unlock[2] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 3
 				break;
 			case sc_resto_demasquage:
-				unlock[3] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 4
 				break;
 			case sc_kiss_fille:
-				unlock[4] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 5
 				break;
 			case sc_kiss_canard:
-				unlock[5] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 6
 				break;
 			case sc_f_bateau:
-				unlock[6] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 7
 				break;
 			case sc_f_robot_ending_3:
-				unlock[7] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 8
 				break;
 			case sc_f_dog:
-				unlock[8] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 9
 				break;
 			case sc_f_robot_sex:
-				unlock[9] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 10
 				break;
 			case sc_mort_voiture:
-				unlock[10] = 1
+				nb_unlocked +=1
+				unlock[nb_unlocked] = 11
 				break;
 			default:
 				break;
@@ -66,7 +76,7 @@ if press_space && cooldown_space < 0{
 cooldown_space -= 1
 
 } else if room != rm_questions {
-	if keyboard_check_pressed(ord("S")) && TRICHERIE = true{
+	if keyboard_check_pressed(ord("S")){
 		returnVal = 1
 	}
 	if returnVal != -1{

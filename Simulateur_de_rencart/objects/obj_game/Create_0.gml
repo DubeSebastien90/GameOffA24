@@ -1,8 +1,6 @@
 //endigns
-nb_endings = sprite_get_number(spr_chambre)-1
-for(var i = 0; i < nb_endings; i++){
-	unlock[i] = 0
-}
+nb_unlocked = 0
+unlock[0] = 0
 
 TRICHERIE = true
 
@@ -124,13 +122,6 @@ function setDependances(){
 	sc_questionnement.next_scene[1] = sc_q_indigner
 	sc_questionnement.next_scene[2] = sc_q_bagarre_commis
 	
-	sc_q_bagarre_commis.next_scene[0] = sc_fight_hand_commis
-	sc_fight_hand_commis.next_scene[0] = sc_q_perdre_combat_tout
-	sc_fight_hand_commis.next_scene[1] = sc_q_gagner_bagarre_commis
-	sc_q_gagner_bagarre_commis.next_scene[0] = sc_q_gagner_bagarre_commis_2
-	sc_q_gagner_bagarre_commis_2.next_scene[0] = sc_restart
-	sc_q_perdre_combat_tout.next_scene[0] = sc_restart
-	
 	sc_q_rester_calme.next_scene[0] = sc_q_se_promener
 	
 	sc_q_indigner.next_scene[0] = sc_q_choix_apres_indign
@@ -141,19 +132,8 @@ function setDependances(){
 	sc_q_se_promener.next_scene[0] = sc_q_combat_femme
 	sc_q_se_promener.next_scene[1] = sc_q_chercher_arme
 	
-	sc_q_combat_femme.next_scene[0] = sc_fight_hand_eve
-	sc_fight_hand_eve.next_scene[0] = sc_q_perdre_combat_femme
-	sc_fight_hand_eve.next_scene[1] = sc_q_gagner_combat_femme
-	sc_q_perdre_combat_femme.next_scene[0] = sc_restart
-	sc_q_gagner_combat_femme.next_scene[0] = sc_restart
-	
 	sc_q_chercher_arme.next_scene[0] = sc_q_chercher_arme2
-	sc_q_chercher_arme2.next_scene[0] = sc_fight_gun_commis
-	sc_fight_gun_commis.next_scene[0] = sc_q_perdre_combat_tout
-	sc_fight_gun_commis.next_scene[1] = sc_q_gagner_combat_fusil
-	sc_q_gagner_combat_fusil.next_scene[0] = sc_q_gagner_combat_fusil_2
-	sc_q_gagner_combat_fusil_2.next_scene[0] = sc_q_gagner_combat_fusil_3
-	sc_q_gagner_combat_fusil_3.next_scene[0] = sc_restart
+	sc_q_chercher_arme2.next_scene[0] = sc_q_combat_fusil
 	
 	// film
 	sc_film_entree.next_scene[0] = sc_f_titanic
@@ -234,26 +214,21 @@ sc_q_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_q_choix_apres_indign = instance_create_depth(0,0,-1000,obj_scene)
 
+sc_q_perdre_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gagner_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
+
 sc_q_se_promener = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_chercher_arme = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_chercher_arme2 = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_q_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
 
-//pas encore def - end fights
-sc_q_perdre_combat_tout = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_bagarre_commis = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_bagarre_commis_2 = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_combat_fusil_2 = instance_create_depth(0,0,-1000,obj_scene)
-sc_q_gagner_combat_fusil_3 = instance_create_depth(0,0,-1000,obj_scene)
 sc_q_perdre_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gsgner_combat_femme = instance_create_depth(0,0,-1000,obj_scene)
 
-//minigames fights
-sc_fight_hand_commis = instance_create_depth(0,0,-1000,obj_scene)
-sc_fight_gun_commis = instance_create_depth(0,0,-1000,obj_scene)
-sc_fight_hand_eve = instance_create_depth(0,0,-1000,obj_scene)
-
+sc_q_perdre_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
+sc_q_gagner_combat_fusil = instance_create_depth(0,0,-1000,obj_scene)
 
 //film
 sc_f_titanic = instance_create_depth(0,0,-1000,obj_scene)
@@ -305,7 +280,7 @@ with (sc_intro_3){
 }
 
 with(sc_mort_voiture){
-	image = spr_mort_auto
+	image = spr_intro_1 //a changer
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Il est toujours important de regarder des deux côtés de la rue avant de traverser."
@@ -515,93 +490,6 @@ with(sc_q_chercher_arme2){
 	dialogue[1] = "TU NE SORTIRAS PAS D'ICI VIVANT !"
 }
 
-with(sc_q_bagarre_commis){
-	image = spr_provoquer_commis
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "EH SALOPARD ! C'EST TOI QUI TRAVAILLE ICI ?!?"
-	dialogue[1] = "VIENS T'EN QUE JE T'EN COLLE TOUTE QU'UNE !"
-}
-
-with(sc_q_combat_femme){
-	image = spr_ferailleuse
-	nb_repliques = 0
-	nb_dialogues = 5
-	dialogue[0] = "Quoi ? Ça ne t'inquiète pas plus que ça ? Pourtant ça devrait te faire peur..."
-	dialogue[1] = "Mouhahaha ne fais pas cette expression, je sais depuis le début que tu es un robot"
-	dialogue[2] = "Sérieusement ? Une simple perruque et un veston, ce n'est vraiment pas discret."
-	dialogue[3] = "Pourquoi penses-tu qu'on a matché sur Tinda, je suis en fait une traqueuse de ferraille !"
-	dialogue[4] = "Viens ici que je te démembres et te vende au plus offrant !"
-}
-
-with(sc_q_perdre_combat_tout){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "Quand un coup est parti, même quatre chevaux seraient en peine pour le rattraper."
-	dialogue[1] = "Comme quoi la violence ne résout pas toujours tous les conflits..."
-}
-
-with(sc_q_gagner_bagarre_commis){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "Mais voyons ! Qu'as-tu fait grand fou ?!?"
-	dialogue[1] = "Quelqu'un ! Appelez la police !"
-}
-
-with(sc_q_gagner_bagarre_commis_2){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "Allez passez lui les menotes, il en a au moins pour 10 ans de prison."
-	dialogue[1] = "EH ! Pourquoi ses bras sont en métal ?"
-}
-
-with(sc_q_gagner_combat_femme){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "Woah mais quelle folle ! Personne ne touche à mes boulons !"
-	dialogue[1] = "Pour une fois que j'avais un rendez-vous qui se passait bien..."
-	
-}
-
-with(sc_q_perdre_combat_femme){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "Hehe tu étais bien membré à ce que je vois."
-	dialogue[1] = "Je vais me faire une petite fortune avec toutes ces composantes."
-}
-
-with(sc_q_gagner_combat_fusil){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 2
-	dialogue[0] = "C'est bon Ève ! Je l'ai eu ce dangereux commis !"
-	dialogue[1] = "Plus personne ne sera blessé par c.. Ève?"
-}
-
-with(sc_q_gagner_combat_fusil_2){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 3
-	dialogue[0] = "Argh, j'ai reçu une balle perdue..."
-	dialogue[1] = "C'en est fini pour moi... je me sens mourir..."
-	dialogue[2] = "Du moins..."
-}
-
-with(sc_q_gagner_combat_fusil_3){
-	image = spr_intro_1 //a changer
-	nb_repliques = 0
-	nb_dialogues = 4
-	dialogue[0] = "Mon enveloppe corporelle est en train de mourir."
-	dialogue[1] = "Je vais devoir vider la cervelle de quelqu'un cette nuit pour aller m'y loger."
-	dialogue[2] = "Ce fut un plaisir de te rencontrer, nous nous reverrons bientôt."
-	dialogue[3] = "J'espère que mon prochain corps va convenir à tes standards de beauté !"
-}
-
 //film 
 with(sc_film_entree){
 	image = spr_film 
@@ -721,21 +609,6 @@ with(sc_crossyroad_1){
 with(sc_crossyroad_2){
 	room_minigame = rm_crossyroad
 	more_info = 1
-}
-
-with(sc_fight_hand_commis){
-	room_minigame = rm_fight
-	more_info = 0
-}
-
-with(sc_fight_gun_commis){
-	room_minigame = rm_fight
-	more_info = 1
-}
-
-with(sc_fight_hand_eve){
-	room_minigame = rm_fight
-	more_info = 2
 }
 
 setDependances()
