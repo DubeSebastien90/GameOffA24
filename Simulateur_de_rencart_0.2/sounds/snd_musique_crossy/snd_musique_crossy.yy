@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_musique_crossy",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":193.90694,
+  "name":"snd_musique_crossy",
+  "parent":{
+    "name":"gr_snd_musique",
+    "path":"folders/Sons/gr_snd_musique.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_musique_crossy.mp3",
+  "type":0,
+  "volume":1.0,
+}
