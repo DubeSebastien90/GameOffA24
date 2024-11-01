@@ -116,6 +116,7 @@
     {"id":{"name":"spr_moi_poing","path":"sprites/spr_moi_poing/spr_moi_poing.yy",},},
     {"id":{"name":"spr_mort_auto","path":"sprites/spr_mort_auto/spr_mort_auto.yy",},},
     {"id":{"name":"spr_pas_perruque","path":"sprites/spr_pas_perruque/spr_pas_perruque.yy",},},
+    {"id":{"name":"spr_police_1","path":"sprites/spr_police_1/spr_police_1.yy",},},
     {"id":{"name":"spr_provoquer_commis","path":"sprites/spr_provoquer_commis/spr_provoquer_commis.yy",},},
     {"id":{"name":"spr_rassure_quinc","path":"sprites/spr_rassure_quinc/spr_rassure_quinc.yy",},},
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},},

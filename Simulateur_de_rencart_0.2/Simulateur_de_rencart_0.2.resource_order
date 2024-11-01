@@ -89,6 +89,7 @@
     {"name":"spr_moi_poing","order":10,"path":"sprites/spr_moi_poing/spr_moi_poing.yy",},
     {"name":"spr_mort_auto","order":27,"path":"sprites/spr_mort_auto/spr_mort_auto.yy",},
     {"name":"spr_pas_perruque","order":4,"path":"sprites/spr_pas_perruque/spr_pas_perruque.yy",},
+    {"name":"spr_police_1","order":17,"path":"sprites/spr_police_1/spr_police_1.yy",},
     {"name":"spr_provoquer_commis","order":28,"path":"sprites/spr_provoquer_commis/spr_provoquer_commis.yy",},
     {"name":"spr_rassure_quinc","order":13,"path":"sprites/spr_rassure_quinc/spr_rassure_quinc.yy",},
     {"name":"spr_road","order":7,"path":"sprites/spr_road/spr_road.yy",},
