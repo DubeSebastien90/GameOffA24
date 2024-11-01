@@ -78,7 +78,7 @@ function setScenario(_info){
 		e_hp = 100
 		e_hp_live = e_hp
 		e_hp_buff = e_hp
-		e_dmg_max = 15
+		e_dmg_max = 20
 		e_sprite = spr_eve_poing
 		e_name = "Ève - tueuse de robots"
 	}

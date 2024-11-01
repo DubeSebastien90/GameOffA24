@@ -1,3 +1,5 @@
+randomize()
+
 //endigns
 nb_endings = sprite_get_number(spr_chambre)-1
 for(var i = 0; i < nb_endings; i++){
@@ -560,7 +562,7 @@ with(sc_q_perdre_combat_tout){
 }
 
 with(sc_q_gagner_bagarre_commis){
-	image = spr_intro_1 //a changer
+	image = spr_police_1
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
@@ -569,7 +571,7 @@ with(sc_q_gagner_bagarre_commis){
 }
 
 with(sc_q_gagner_bagarre_commis_2){
-	image = spr_intro_1 //a changer
+	image = spr_police_2
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Allez passez lui les menotes, il en a au moins pour 10 ans de prison."
@@ -577,7 +579,7 @@ with(sc_q_gagner_bagarre_commis_2){
 }
 
 with(sc_q_gagner_combat_femme){
-	image = spr_intro_1 //a changer
+	image = spr_tuer_femme
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
@@ -587,7 +589,7 @@ with(sc_q_gagner_combat_femme){
 }
 
 with(sc_q_perdre_combat_femme){
-	image = spr_intro_1 //a changer
+	image = spr_boulons
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
@@ -596,7 +598,7 @@ with(sc_q_perdre_combat_femme){
 }
 
 with(sc_q_gagner_combat_fusil){
-	image = spr_intro_1 //a changer
+	image = spr_eve_blessee_1
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
@@ -605,7 +607,7 @@ with(sc_q_gagner_combat_fusil){
 }
 
 with(sc_q_gagner_combat_fusil_2){
-	image = spr_intro_1 //a changer
+	image = spr_eve_blessee_2
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "Argh, j'ai reçu une balle perdue..."
@@ -614,7 +616,7 @@ with(sc_q_gagner_combat_fusil_2){
 }
 
 with(sc_q_gagner_combat_fusil_3){
-	image = spr_intro_1 //a changer
+	image = spr_eve_blessee_3
 	nb_repliques = 0
 	nb_dialogues = 4
 	dialogue[0] = "Mon enveloppe corporelle est en train de mourir."

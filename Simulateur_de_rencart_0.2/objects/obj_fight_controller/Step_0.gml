@@ -63,13 +63,13 @@ if charFight == 1 && stateFight == 0{
 	}
 }
 
-if m_hp_live < 0{
+if m_hp_live <= 0{
 	fighting = 0
 	cooldown = 60
 	charFight = 1
 }
 
-if e_hp_live < 0{
+if e_hp_live <= 0{
 	fighting = 1
 	cooldown = 60
 	charFight = 1
