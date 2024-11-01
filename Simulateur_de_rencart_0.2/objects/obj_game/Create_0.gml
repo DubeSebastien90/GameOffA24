@@ -551,7 +551,7 @@ with(sc_q_combat_femme){
 }
 
 with(sc_q_perdre_combat_tout){
-	image = spr_intro_1 //a changer
+	image =spr_boulons
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2

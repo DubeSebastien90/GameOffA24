@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_titanic_1",
   "bboxMode":0,
-  "bbox_bottom":199,
+  "bbox_bottom":178,
   "bbox_left":0,
   "bbox_right":299,
   "bbox_top":0,
