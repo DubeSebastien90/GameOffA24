@@ -61,6 +61,21 @@ if press_space && cooldown_space < 0{
 			case sc_mort_voiture:
 				unlock[10] = 1
 				break;
+			case sc_q_perdre_combat_femme:
+				unlock[11] = 1
+				break;
+			case sc_q_perdre_combat_tout:
+				unlock[11] = 1
+				break;
+			case sc_q_gagner_bagarre_commis_2:
+				unlock[12] = 1
+				break;
+			case sc_q_gagner_combat_femme:
+				unlock[13] = 1
+				break;
+			case sc_q_gagner_combat_fusil_3:
+				unlock[14] = 1
+				break;
 			default:
 				break;
 		}
