@@ -23,48 +23,37 @@ if press_space && cooldown_space < 0{
 	} else {
 		switch(scene_actuelle){
 			case sc_resto_explosion:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 1
+				unlock[0] = 1
 				break;
 			case sc_etang_skinny_dip:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 2
+				unlock[1] = 1
 				break;
 			case sc_resto_vers_eau:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 3
+				unlock[2] = 1
 				break;
 			case sc_resto_demasquage:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 4
+				unlock[3] = 1
 				break;
 			case sc_kiss_fille:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 5
+				unlock[4] = 1
 				break;
 			case sc_kiss_canard:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 6
+				unlock[5] = 1
 				break;
 			case sc_f_bateau:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 7
+				unlock[6] = 1
 				break;
 			case sc_f_robot_ending_3:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 8
+				unlock[7] = 1
 				break;
 			case sc_f_dog:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 9
+				unlock[8] = 1
 				break;
 			case sc_f_robot_sex:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 10
+				unlock[9] = 1
 				break;
 			case sc_mort_voiture:
-				nb_unlocked +=1
-				unlock[nb_unlocked] = 11
+				unlock[10] = 1
 				break;
 			default:
 				break;

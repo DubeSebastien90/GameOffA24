@@ -11,8 +11,11 @@ if scene_actuelle.nb_repliques>0{
 	draw_sprite(scene_actuelle.image,0,10,10)
 } else{
 	if scene_actuelle = sc_restart{
-		for(var i = 0; i <= nb_unlocked; i++){
-			draw_sprite(spr_chambre,unlock[i],0,0)
+		draw_sprite(spr_chambre,0,0,0)
+		for(var i = 0; i < nb_endings; i++){
+			if(unlock[i] == 1){
+				draw_sprite(spr_chambre,i+1,0,0)
+			}
 		}
 	} else{
 		draw_sprite_ext(scene_actuelle.image,0,room_width/2,room_height/2 + 12,0.92,0.92,0,c_white,1)
