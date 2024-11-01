@@ -6,15 +6,18 @@ press_down = keyboard_check_pressed(vk_down)
 if scene_actuelle != noone && room == rm_questions{
 
 if press_up{
-	audio_play_sound_ext({sound: snd_boup, loop: false, pitch: random_range(0.9,1.1)})
+	if replique_actuelle > 0{
+		audio_play_sound_ext({sound: snd_boup, loop: false, pitch: random_range(0.9,1.1)})
+	}
 	replique_actuelle -= 1
 	replique_actuelle = max(replique_actuelle,0)
 }
 
 if press_down{
-	audio_play_sound_ext({sound: snd_boup, loop: false, pitch: random_range(0.9,1.1)})
-	replique_actuelle += 1
-	replique_actuelle = min(replique_actuelle,scene_actuelle.nb_repliques-1)
+	if replique_actuelle < scene_actuelle.nb_repliques-1 && dialogue_actuel == scene_actuelle.nb_dialogues-1{
+		audio_play_sound_ext({sound: snd_boup, loop: false, pitch: random_range(0.9,1.1)})
+		replique_actuelle += 1
+	}
 }
 
 if press_space && cooldown_space < 0{
