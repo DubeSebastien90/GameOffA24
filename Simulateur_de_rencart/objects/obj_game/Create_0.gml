@@ -516,7 +516,7 @@ with(sc_q_chercher_arme2){
 }
 
 with(sc_q_bagarre_commis){
-	image = spr_intro_1 //a changer
+	image = spr_provoquer_commis
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "EH SALOPARD ! C'EST TOI QUI TRAVAILLE ICI ?!?"
@@ -524,7 +524,7 @@ with(sc_q_bagarre_commis){
 }
 
 with(sc_q_combat_femme){
-	image = spr_intro_1 //a changer
+	image = spr_ferailleuse
 	nb_repliques = 0
 	nb_dialogues = 5
 	dialogue[0] = "Quoi ? Ça ne t'inquiète pas plus que ça ? Pourtant ça devrait te faire peur..."
@@ -588,7 +588,7 @@ with(sc_q_gagner_combat_fusil_2){
 	nb_repliques = 0
 	nb_dialogues = 3
 	dialogue[0] = "Argh, j'ai reçu une balle perdue..."
-	dialogue[1] = "C'est est fini pour moi... je me sens mourir..."
+	dialogue[1] = "C'en est fini pour moi... je me sens mourir..."
 	dialogue[2] = "Du moins..."
 }
 
