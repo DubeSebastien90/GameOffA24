@@ -64,6 +64,7 @@
     {"id":{"name":"rm_questions","path":"rooms/rm_questions/rm_questions.yy",},},
     {"id":{"name":"snd_boup","path":"sounds/snd_boup/snd_boup.yy",},},
     {"id":{"name":"snd_crate","path":"sounds/snd_crate/snd_crate.yy",},},
+    {"id":{"name":"snd_dog","path":"sounds/snd_dog/snd_dog.yy",},},
     {"id":{"name":"snd_electricite","path":"sounds/snd_electricite/snd_electricite.yy",},},
     {"id":{"name":"snd_explosion","path":"sounds/snd_explosion/snd_explosion.yy",},},
     {"id":{"name":"snd_musique_crossy","path":"sounds/snd_musique_crossy/snd_musique_crossy.yy",},},

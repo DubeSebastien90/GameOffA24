@@ -304,6 +304,7 @@ with (sc_restart){
 
 with (sc_intro_1){
 	image = spr_intro_1
+	musique = snd_musique
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Oh tiens regarde, un nouveau match sur Tinda!"
@@ -752,6 +753,7 @@ with(sc_f_pudique){
 }
 
 with(sc_f_dog){
+	sound = snd_dog
 	image =spr_film_chien
 	nb_repliques = 0
 	nb_dialogues = 2

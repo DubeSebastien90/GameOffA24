@@ -42,6 +42,7 @@
     {"name":"rm_fight","order":2,"path":"rooms/rm_fight/rm_fight.yy",},
     {"name":"snd_boup","order":6,"path":"sounds/snd_boup/snd_boup.yy",},
     {"name":"snd_crate","order":13,"path":"sounds/snd_crate/snd_crate.yy",},
+    {"name":"snd_dog","order":14,"path":"sounds/snd_dog/snd_dog.yy",},
     {"name":"snd_electricite","order":12,"path":"sounds/snd_electricite/snd_electricite.yy",},
     {"name":"snd_explosion","order":4,"path":"sounds/snd_explosion/snd_explosion.yy",},
     {"name":"snd_musique_crossy","order":1,"path":"sounds/snd_musique_crossy/snd_musique_crossy.yy",},
