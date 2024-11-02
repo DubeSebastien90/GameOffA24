@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sex_controller",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_protection",
+  "eventList":[],
   "managed":true,
-  "name":"obj_sex_controller",
+  "name":"obj_protection",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_obj_sex",
