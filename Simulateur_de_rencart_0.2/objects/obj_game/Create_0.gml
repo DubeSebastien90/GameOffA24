@@ -32,6 +32,9 @@ replique[0] = ""
 
 
 function setNextScene(_scene){
+	if scene_actuelle == sc_menu && replique_actuelle == 0{
+		game_end()
+	} else{
 	if _scene.musique != noone{
 		audio_stop_sound(my_musique)
 		my_musique = audio_play_sound(_scene.musique,0,true)
@@ -65,9 +68,12 @@ function setNextScene(_scene){
 		scene_actuelle = _scene
 		room_goto(_scene.room_minigame)
 	}
+	}
 }
 
 function setDependances(){
+	sc_menu.next_scene[1] = sc_restart
+	
 	sc_restart.next_scene[0] = sc_intro_1
 	//intro
 	sc_intro_1.next_scene[0] = sc_intro_2
@@ -196,6 +202,7 @@ function setDependances(){
 	
 }
 
+sc_menu = instance_create_depth(0,0,-1000,obj_scene)
 //minigames
 sc_crossyroad_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_crossyroad_2 = instance_create_depth(0,0,-1000,obj_scene)
@@ -813,5 +820,15 @@ with(sc_nourir_canard){
 	musique = snd_musique_crossy
 }
 
+with(sc_menu){
+	image = spr_attention
+	nb_repliques = 2
+	nb_dialogues = 2
+	dialogue[0] = "Attention, ce jeu est destiné à un auditoire de 13 ans et plus."
+	dialogue[1] = "Es-tu assez vieux pour jouer ?"
+	replique[0] = "Non, j'ai moins de 13 ans"
+	replique[1] = "Oui, j'ai 13 ans et plus"
+}
+
 setDependances()
-setNextScene(sc_restart)
+setNextScene(sc_menu)

@@ -4,8 +4,9 @@ if scene_actuelle != noone && room == rm_questions{
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 draw_set_font(fnt_pixel)
+draw_set_color(c_lime)
 
-var val = 128
+var val = 130
 
 if scene_actuelle.nb_repliques>0{ 
 	draw_sprite(spr_fond,0,0,0)
@@ -25,8 +26,9 @@ if scene_actuelle.nb_repliques>0{
 	draw_rectangle_color(5-2,120-2,room_width-5 + 2, 120 + 19 + 2,c_black,c_black,c_black,c_black,false)
 	draw_set_alpha(1)
 	val = 120
+	draw_set_color(c_white)
 }
-draw_text_ext_transformed(5,val,scene_actuelle.dialogue[dialogue_actuel],19,(room_width-15)/0.5,0.5,0.5,0)
+draw_text_ext_transformed(5,val,scene_actuelle.dialogue[dialogue_actuel],19,(room_width-15)/0.45,0.45,0.45,0)
 
 if dialogue_actuel = scene_actuelle.nb_dialogues-1 && scene_actuelle.nb_repliques>0{
 	var space = 29
