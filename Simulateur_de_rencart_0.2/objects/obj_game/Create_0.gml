@@ -6,7 +6,7 @@ for(var i = 0; i < nb_endings; i++){
 	unlock[i] = 0
 }
 
-TRICHERIE = true
+TRICHERIE = false
 
 my_musique = noone
 
