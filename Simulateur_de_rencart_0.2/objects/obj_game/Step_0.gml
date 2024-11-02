@@ -1,3 +1,8 @@
+//util
+if keyboard_check_pressed(vk_tab){
+	window_set_fullscreen(!window_get_fullscreen())
+}
+
 //contôles
 press_space = keyboard_check_pressed(vk_space)
 press_up = keyboard_check_pressed(vk_up)
