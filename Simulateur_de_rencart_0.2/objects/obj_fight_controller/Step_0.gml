@@ -25,6 +25,7 @@ if charFight = 0 && stateFight == 0{
 	if press_space{
 		cooldown = cooldownAtt
 		m_ind = 2
+		audio_play_sound_ext({sound: snd_pop, loop: false, pitch: random_range(0.9,1.1)})
 		var dmg = round(m_dmg_max*(1-(min(1,max(0,(abs(room_width/2 - icon_pos)))/40))))
 		e_hp_live -= dmg
 		with(instance_create_depth(room_width*0.75,room_height/3,depth-1,obj_textShow)){
@@ -40,6 +41,7 @@ if charFight == 1 && stateFight == 0{
 	if cooldown < 0{
 		cooldown = cooldownAtt
 		e_ind = 2
+		audio_play_sound_ext({sound: snd_pop, loop: false, pitch: random_range(0.9,1.1)})
 		var dmg = round(e_dmg_max*random_range(0.7,1))
 		m_hp_live -= dmg
 		stateFight = 1

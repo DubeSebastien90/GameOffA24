@@ -117,11 +117,16 @@ function setDependances(){
 	
 	sc_etang_entree.next_scene[0] = sc_etang_skinny_dip
 	sc_etang_entree.next_scene[1] = sc_etang_canard
+	sc_etang_canard.next_scene[0] = sc_nourir_canard
+	sc_nourir_canard.next_scene[0] = sc_perdu_canard
+	sc_nourir_canard.next_scene[1] = sc_gagne_canard
 	
+	sc_perdu_canard.next_scene[0] = sc_noyade
+	sc_noyade.next_scene[0] = sc_restart
 	//branch
 	
-	sc_etang_canard.next_scene[0] = sc_kiss_fille
-	sc_etang_canard.next_scene[1] = sc_kiss_canard
+	sc_gagne_canard.next_scene[0] = sc_kiss_fille
+	sc_gagne_canard.next_scene[1] = sc_kiss_canard
 	
 	
 	sc_etang_skinny_dip.next_scene[0] = sc_restart
@@ -194,6 +199,7 @@ function setDependances(){
 //minigames
 sc_crossyroad_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_crossyroad_2 = instance_create_depth(0,0,-1000,obj_scene)
+sc_nourir_canard = instance_create_depth(0,0,-1000,obj_scene)
 
 //scenes
 //intro
@@ -230,6 +236,10 @@ sc_quincaillerie = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_etang_canard = instance_create_depth(0,0,-1000,obj_scene)
 sc_etang_skinny_dip = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_perdu_canard = instance_create_depth(0,0,-1000,obj_scene)
+sc_gagne_canard = instance_create_depth(0,0,-1000,obj_scene)
+sc_noyade = instance_create_depth(0,0,-1000,obj_scene)
 
 //canard 
 
@@ -363,6 +373,7 @@ with (sc_resto_serveur){
 
 with (sc_resto_vers_eau){
 	image = spr_verre_eau
+	sound = snd_electricite
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEEAOFIDF *mort soufffrante*"
@@ -424,20 +435,47 @@ with (sc_etang_entree){
 
 with (sc_etang_canard){
 	image = spr_date_canard 
-	nb_repliques = 2
+	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... UwU "
-	replique[0] = "L'embrasser"
-	replique[1] = "Embrasser le canard"
+	dialogue[0] = "Ils sont trop miniooooons! Nourris les s'il te plaît !"
 }
 
 with (sc_etang_skinny_dip){
-	image = spr_skinny_dip 
+	image = spr_skinny_dip
+	sound = snd_electricite
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE ÉNORMÉMENT"
 	dialogue[1] = "Au moins j'aurai vu une femme nue avant ma mort ! Yes !"
 }
+
+with(sc_perdu_canard){
+	image = spr_date_canard_aide
+	musique = snd_musique
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Oh non... t'es trop nul en fait !"
+	dialogue[1] = "Laisse moi le faire ! *Trébuche* AAAAAAH SPLOUSH ARGH !"
+}
+
+with(sc_noyade){
+	image = spr_etang_noyade
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Bon... j'imagine que c'est des choses qui arrivent"
+	dialogue[1] = "Mieux vaudrait partir d'ici avant que quelqu'un me voie..."
+}
+
+with(sc_gagne_canard){
+	image = spr_etang_romantique
+	musique = snd_musique
+	nb_repliques = 2
+	nb_dialogues = 1
+	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... Je vis un moment incroyable !"
+	replique[0] = "L'embrasser"
+	replique[1] = "Embrasser le canard"
+}
+
 
 with (sc_kiss_fille){
 	image = spr_bisou_fille 
@@ -572,6 +610,7 @@ with(sc_q_gagner_bagarre_commis){
 
 with(sc_q_gagner_bagarre_commis_2){
 	image = spr_police_2
+	sound = snd_police
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Allez passez lui les menotes, il en a au moins pour 10 ans de prison."
@@ -649,6 +688,7 @@ with(sc_f_titanic){
 
 with(sc_f_bateau){
 	image = spr_titanic_2
+	sound = snd_crate
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "HOOOONK HOOONK MOTHERTRUCKERS !"
@@ -765,6 +805,11 @@ with(sc_fight_hand_eve){
 	room_minigame = rm_fight
 	more_info = 2
 	musique = snd_musique_fight
+}
+
+with(sc_nourir_canard){
+	room_minigame = rm_canards
+	musique = snd_musique_crossy
 }
 
 setDependances()

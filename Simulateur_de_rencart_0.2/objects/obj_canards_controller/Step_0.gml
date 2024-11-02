@@ -3,58 +3,37 @@
 
 var _moi = self
 
-if nb_fed == 10 {
-	obj_game.returnVal = 1
+if nb_fed == goal_fed {
+	fin = 1
+	obj_character_canard.controle = false
+}
+if temps > tempsJeu{
+	fin = 0
+	obj_character_canard.controle = false
 }
 
-
-if cooldowns[0] < 0 {
-
-	with(instance_create_depth(create_x[0], create_y[0], -100, obj_canard)) {
-		
-		cote[0] = cos(_moi.angles[0])
-		cote[1] = sin(_moi.angles[0])
+if fin != -1{
+	if cooldownFin < 0{
+		obj_game.returnVal = fin
 	}
-}
-if cooldowns[1] < 0 {
+	cooldownFin -= 1
+} else temps ++
 
-	with(instance_create_depth(create_x[1], create_y[1], -100, obj_canard)) {
-		
-		cote[0] = -cos(_moi.angles[1])
-		cote[1] = -sin(_moi.angles[1])
+
+if cooldown < 0{
+	var side = choose(0,1)
+	var _x
+	_x[0] = -15
+	_x[1] = room_width+15
+	with(instance_create_depth(_x[side],random_range(30,room_height-30-32),depth-1000,obj_canard)){
+		if side = 1{
+			image_xscale*= -1
+		}
 	}
+	cooldown = random_range(70,150)
 }
-if cooldowns[2] < 0 {
+cooldown--
 
-	with(instance_create_depth(create_x[2], create_y[2], -100, obj_canard)) {
-		
-		cote[0] = -cos(_moi.angles[2])
-		cote[1] = -sin(_moi.angles[2])
-	}
-}
-
-
-for (var i = 0; i < nb_spawn; i++) {
-	
-	if angles[i] < angles_min_max[i][0] or angles[i] > angles_min_max[i][1] {
-	
-		angles_variations[i] = -angles_variations[i]
-		
-		angles[i] += angles_variations[i]
-	} else {
-		angles[i] += angles_variations[i]
-	}
-	
-}
-
-for (var i = 0; i < nb_spawn; i++) {
-
-	if cooldowns[i] < 0 {
-		cooldowns[i] = random_range(100, 200)
-	} else {
-		cooldowns[i]--;
-	}
-}
 
 
 

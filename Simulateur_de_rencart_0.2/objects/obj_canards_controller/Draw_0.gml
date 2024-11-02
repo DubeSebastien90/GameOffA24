@@ -1,0 +1,11 @@
+draw_sprite_ext(spr_bck_canards,0,0,0,20,10,0,c_white,1)
+draw_sprite_ext(spr_deck,0,0,room_height-32,20,2,0,c_white,1)
+
+draw_set_font(fnt_pixel)
+draw_set_valign(fa_top)
+draw_set_halign(fa_left)
+draw_text_transformed(5,5,"Temps restant: ",0.4,0.4,0)
+draw_sprite(spr_temps,0,65,6)
+draw_sprite_ext(spr_temps,1,65,6,max(0,(tempsJeu-temps)/tempsJeu),1,0,c_white,1)
+draw_sprite_ext(spr_canard_icon,0,10,20,0.4,0.4,0,c_white,1)
+draw_text_transformed(18,15,": "+string(goal_fed - nb_fed),0.4,0.4,0)

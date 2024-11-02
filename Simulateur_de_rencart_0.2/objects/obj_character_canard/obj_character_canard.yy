@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_walle_1",
-    "path":"sprites/spr_walle_1/spr_walle_1.yy",
+    "name":"spr_walle_etang",
+    "path":"sprites/spr_walle_etang/spr_walle_etang.yy",
   },
   "spriteMaskId":null,
   "visible":true,

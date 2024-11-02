@@ -76,6 +76,9 @@ if press_space && cooldown_space < 0{
 			case sc_q_gagner_combat_fusil_3:
 				unlock[14] = 1
 				break;
+			case sc_noyade:
+				unlock[15] = 1
+				break;
 			default:
 				break;
 		}
