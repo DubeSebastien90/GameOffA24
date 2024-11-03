@@ -60,7 +60,7 @@ if press_space && cooldown_space < 0{
 			case sc_f_dog:
 				unlock[8] = 1
 				break;
-			case sc_f_robot_sex:
+			case sc_f_win_sex:
 				unlock[9] = 1
 				break;
 			case sc_mort_voiture:
@@ -83,6 +83,9 @@ if press_space && cooldown_space < 0{
 				break;
 			case sc_noyade:
 				unlock[15] = 1
+				break;
+			case sc_f_loose_sex:
+				unlock[16] = 1
 				break;
 			default:
 				break;

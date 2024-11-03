@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_port",
+  "%Name":"obj_bobber",
   "eventList":[],
   "managed":true,
-  "name":"obj_port",
+  "name":"obj_bobber",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_obj_sex",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_port",
-    "path":"sprites/spr_port/spr_port.yy",
+    "name":"spr_bobber",
+    "path":"sprites/spr_bobber/spr_bobber.yy",
   },
   "spriteMaskId":null,
   "visible":true,

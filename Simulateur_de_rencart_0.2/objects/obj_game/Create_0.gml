@@ -198,7 +198,12 @@ function setDependances(){
 	sc_f_dog.next_scene[0] = sc_restart
 	
 	sc_f_naked.next_scene[0] = sc_f_robot_sex
-	sc_f_robot_sex.next_scene[0] = sc_restart
+	sc_f_robot_sex.next_scene[0] = sc_sex
+	sc_sex.next_scene[0] = sc_f_loose_sex
+	sc_sex.next_scene[1] = sc_f_win_sex
+	
+	sc_f_loose_sex.next_scene[0] = sc_restart
+	sc_f_win_sex.next_scene[0] = sc_restart
 	
 }
 
@@ -207,6 +212,7 @@ sc_menu = instance_create_depth(0,0,-1000,obj_scene)
 sc_crossyroad_1 = instance_create_depth(0,0,-1000,obj_scene)
 sc_crossyroad_2 = instance_create_depth(0,0,-1000,obj_scene)
 sc_nourir_canard = instance_create_depth(0,0,-1000,obj_scene)
+sc_sex = instance_create_depth(0,0,-1000,obj_scene)
 
 //scenes
 //intro
@@ -300,6 +306,9 @@ sc_f_robot_ending_3 = instance_create_depth(0,0,-1000,obj_scene)
 
 sc_f_dog = instance_create_depth(0,0,-1000,obj_scene)
 sc_f_robot_sex = instance_create_depth(0,0,-1000,obj_scene)
+
+sc_f_win_sex = instance_create_depth(0,0,-1000,obj_scene)
+sc_f_loose_sex = instance_create_depth(0,0,-1000,obj_scene)
 
 with (sc_restart){
 	image = spr_chambre
@@ -778,10 +787,28 @@ with(sc_f_naked){
 
 with(sc_f_robot_sex){
 	image = spr_film_robot_sex
+	musique = snd_sex
 	nb_repliques = 0
 	nb_dialogues = 2
 	dialogue[0] = "Tu es un robot toi aussi ! Je suis tellement soulagée"
 	dialogue[1] = "Allez viens me graisser les tuyaux, mon port USB n'attend que ta clé"
+}
+
+with(sc_f_loose_sex){
+	image = spr_film_perdu_sex
+	musique = snd_musique
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Bon... Non mais c'est vraiment pas grave, ça arrive à tout le monde."
+	dialogue[1] = "De toute façon tu dois être un gros puceau, oui toi derrière l'écran! Puceau ! Puceau !"
+}
+
+with(sc_f_win_sex){
+	image = spr_film_gagne_sex
+	nb_repliques = 0
+	nb_dialogues = 2
+	dialogue[0] = "Ouhlala ça faisait assez longtemps que j'avais bien niqué comme ça !"
+	dialogue[1] = "On se rappelle bientôt d'accord ?"
 }
 
 //minigames
@@ -818,6 +845,10 @@ with(sc_fight_hand_eve){
 with(sc_nourir_canard){
 	room_minigame = rm_canards
 	musique = snd_musique_crossy
+}
+
+with(sc_sex){
+	room_minigame = rm_sex
 }
 
 with(sc_menu){

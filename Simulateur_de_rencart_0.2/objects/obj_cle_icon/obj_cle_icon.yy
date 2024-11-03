@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_USB",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_cle_icon",
+  "eventList":[],
   "managed":true,
-  "name":"obj_USB",
+  "name":"obj_cle_icon",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_obj_sex",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_USB",
-    "path":"sprites/spr_USB/spr_USB.yy",
+    "name":"spr_cle_icon",
+    "path":"sprites/spr_cle_icon/spr_cle_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

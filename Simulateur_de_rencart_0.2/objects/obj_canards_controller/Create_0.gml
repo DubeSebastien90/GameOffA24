@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+randomize()
+
 cooldown = 0
 nb_fed = 0
 goal_fed = 10
