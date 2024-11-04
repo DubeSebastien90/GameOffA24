@@ -4,6 +4,8 @@ bobber_size = 40
 icon_size = 8
 jauge_size = 128
 
+game_started = false
+
 //bobber
 acc = 0
 grav = 0.12

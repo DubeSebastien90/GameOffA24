@@ -20,13 +20,13 @@ if stateFight == 1{
 
 if charFight = 0 && stateFight == 0{
 	m_ind = 1
-	temps += 3
+	temps += 2
 	icon_pos = ((25*10 - 20)/2) * dsin(temps) + room_width/2
 	if press_space{
 		cooldown = cooldownAtt
 		m_ind = 2
 		audio_play_sound_ext({sound: snd_pop, loop: false, pitch: random_range(0.9,1.1)})
-		var dmg = round(m_dmg_max*(1-(min(1,max(0,(abs(room_width/2 - icon_pos)))/40))))
+		var dmg = round(m_dmg_max*(1-(min(1,max(0,(abs(room_width/2 - icon_pos)))/70))))
 		e_hp_live -= dmg
 		with(instance_create_depth(room_width*0.75,room_height/3,depth-1,obj_textShow)){
 			text = "-"+string(dmg)

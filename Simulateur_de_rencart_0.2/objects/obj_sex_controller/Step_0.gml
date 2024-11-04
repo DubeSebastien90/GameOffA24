@@ -26,14 +26,15 @@ if fin == -1{
 	my_icon.y = lerp(my_icon.y,y_dir,0.05)
 }
 
-if cooldown_dir < 0{
-	cooldown_dir = random_range(60,160)
-	y_dir = random_range(min_pos,max_pos)
-}
 
 cooldown_dir--
 
-if fin == -1{
+if fin == -1 && game_started{
+	if cooldown_dir < 0{
+		cooldown_dir = random_range(60,160)
+		y_dir = random_range(min_pos,max_pos)
+	}
+	
 	var _moi = self
 	with(my_bobber){
 		if place_meeting(x,y,_moi.my_icon){
@@ -55,7 +56,7 @@ if fin == -1{
 		buff = 0.02
 	}
 
-} else {
+} else if fin != -1{
 	cooldown_fin -= 1
 	if cooldown_fin < 0{
 		obj_game.returnVal = fin
@@ -64,3 +65,10 @@ if fin == -1{
 
 cle_x = lerp(cle_x,cle_x_dir,buff)
 cle_y = lerp(cle_y,cle_y_dir,buff)
+
+var _moi = self
+with(obj_bobber){
+	if place_meeting(x,y,obj_cle_icon){
+		_moi.game_started = true
+	}
+}
