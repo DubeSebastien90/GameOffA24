@@ -1,5 +1,9 @@
 randomize()
 
+//easy access
+langage = 0
+//français = 0, anglais = 1
+
 //endigns
 nb_endings = sprite_get_number(spr_chambre)-1
 for(var i = 0; i < nb_endings; i++){
@@ -314,7 +318,7 @@ with (sc_restart){
 	image = spr_chambre
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Appuies sur la barre d'espace pour commencer."
+	dialogue[0][0] = "Appuies sur la barre d'espace pour commencer."
 	musique = snd_musique
 }
 
@@ -322,16 +326,16 @@ with (sc_intro_1){
 	image = spr_intro_1
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Oh tiens regarde, un nouveau match sur Tinda!"
-	dialogue[1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie."
+	dialogue[0][0] = "Oh tiens regarde, un nouveau match sur Tinda!"
+	dialogue[0][1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie."
 }
 
 with (sc_intro_2){
 	image = spr_intro_2
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Mais non! Que faire! Je suis un robot, mes émotions sont simulées par des circuits électriques..."
-	dialogue[1] = "Personne ne voudra de moi pour une relation à caractère romantique."
+	dialogue[0][0] = "Mais non! Que faire! Je suis un robot, mes émotions sont simulées par des circuits électriques..."
+	dialogue[0][1] = "Personne ne voudra de moi pour une relation à caractère romantique."
 
 }
 
@@ -339,8 +343,8 @@ with (sc_intro_3){
 	image = spr_intro_3
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement."
-	dialogue[1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu."
+	dialogue[0][0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement."
+	dialogue[0][1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu."
 }
 
 with(sc_mort_voiture){
@@ -348,8 +352,8 @@ with(sc_mort_voiture){
 	musique = snd_musique
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Il est toujours important de regarder des deux côtés de la rue avant de traverser."
-	dialogue[1] = "Comme quoi, l'amour rend vraiment aveugle..."
+	dialogue[0][0] = "Il est toujours important de regarder des deux côtés de la rue avant de traverser."
+	dialogue[0][1] = "Comme quoi, l'amour rend vraiment aveugle..."
 }
 
 with (sc_resto){
@@ -357,11 +361,11 @@ with (sc_resto){
 	musique = snd_musique
 	nb_repliques = 3
 	nb_dialogues = 2
-	replique[0] = "Merci, c'est très gentil"
-	replique[1] = "Toi aussi, tu es très charmante"
-	replique[2] = "*Imploser*"
-	dialogue[0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
-	dialogue[1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
+	replique[0][0] = "Merci, c'est très gentil"
+	replique[0][1] = "Toi aussi, tu es très charmante"
+	replique[0][2] = "*Imploser*"
+	dialogue[0][0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
+	dialogue[0][1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
 }
 
 
@@ -370,20 +374,20 @@ with (sc_resto_explosion){
 	sound = snd_explosion
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "BOUM POW AAAAAAAAAAAAH"
-	dialogue[1] = "Zute de flute, pour une fois que ma date se passait à merveille."
+	dialogue[0][0] = "BOUM POW AAAAAAAAAAAAH"
+	dialogue[0][1] = "Zute de flute, pour une fois que ma date se passait à merveille."
 }
 
 with (sc_resto_serveur){
 	image = spr_serveur
 	nb_repliques = 4
 	nb_dialogues = 2
-	dialogue[0] = "Bonsoir mes tourtereaux..."
-	dialogue[1] = "Que puis-je vous servir ce soir ?"
-	replique[0] = "Un verre d'eau frais !"
-	replique[1] = "Un verre d'huile, bip boup."
-	replique[2] = "Un spaghetti sauce bolognaise !"
-	replique[3] = "OMG J'ÉTAIS PAS PRÊT POUR ÇA ! *Courir aux toilettes*"
+	dialogue[0][0] = "Bonsoir mes tourtereaux..."
+	dialogue[0][1] = "Que puis-je vous servir ce soir ?"
+	replique[0][0] = "Un verre d'eau frais !"
+	replique[0][1] = "Un verre d'huile, bip boup."
+	replique[0][2] = "Un spaghetti sauce bolognaise !"
+	replique[0][3] = "OMG J'ÉTAIS PAS PRÊT POUR ÇA ! *Courir aux toilettes*"
 }
 
 
@@ -392,15 +396,15 @@ with (sc_resto_vers_eau){
 	sound = snd_electricite
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEEAOFIDF *mort soufffrante*"
+	dialogue[0][0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEEAOFIDF *mort soufffrante*"
 }
 
 with (sc_resto_vers_huile){
 	image = spr_date_huile 
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "What, t'es trop bizarre lol. Je trouve ça très masculin boire de l'huile, j'aime ça."
-	dialogue[1] = "Quoi? C'est pas bizarre du tout manger une carotte... "
+	dialogue[0][0] = "What, t'es trop bizarre lol. Je trouve ça très masculin boire de l'huile, j'aime ça."
+	dialogue[0][1] = "Quoi? C'est pas bizarre du tout manger une carotte... "
 }
 
 
@@ -408,22 +412,22 @@ with (sc_resto_spag){
 	image = spr_date_spag 
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Le classique. Ok je savais pas que t'étais de même."
-	dialogue[1] = "Arrête! Une carotte c'est vraiment plus original."
+	dialogue[0][0] = "Le classique. Ok je savais pas que t'étais de même."
+	dialogue[0][1] = "Arrête! Une carotte c'est vraiment plus original."
 }
 
 with (sc_resto_toilette){
 	image = spr_toilettes 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Omg j'ai passé trop proche de la catastrophe, allez, on respire et on y retourne."
+	dialogue[0][0] = "Omg j'ai passé trop proche de la catastrophe, allez, on respire et on y retourne."
 }
 
 with (sc_resto_demasquage){
 	image = spr_pas_perruque 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
+	dialogue[0][0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
 }
 
 
@@ -431,11 +435,11 @@ with (sc_resto_demande_next_activite){
 	image = spr_date_1 
 	nb_repliques = 3
 	nb_dialogues = 2
-	dialogue[0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
-	dialogue[1] = "Aimerais-tu qu'on aille ailleurs ? Quelle idée préfères-tu ?"
-	replique[0] = "Je connais un étang trop chou pas trop loin d'ici..."
-	replique[1] = "Je te laisse décider, emmène moi à ton endroit favori !"
-	replique[2] = "Et si on allait chez moi écouter un film ? "
+	dialogue[0][0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
+	dialogue[0][1] = "Aimerais-tu qu'on aille ailleurs ? Quelle idée préfères-tu ?"
+	replique[0][0] = "Je connais un étang trop chou pas trop loin d'ici..."
+	replique[0][1] = "Je te laisse décider, emmène moi à ton endroit favori !"
+	replique[0][2] = "Et si on allait chez moi écouter un film ? "
 }
 
 with (sc_etang_entree){
@@ -443,9 +447,9 @@ with (sc_etang_entree){
 	musique = snd_musique
 	nb_repliques = 2
 	nb_dialogues = 1
-	dialogue[0] = "Vraiment charmant cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
-	replique[0] = "SKINNY DIP !!"
-	replique[1] = "Nourrir les canards serait un choix à la fois écologiquement responsable et rapprocheur :)"
+	dialogue[0][0] = "Vraiment charmant cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
+	replique[0][0] = "SKINNY DIP !!"
+	replique[0][1] = "Nourrir les canards serait un choix à la fois écologiquement responsable et rapprocheur :)"
 }
 
 
@@ -453,7 +457,7 @@ with (sc_etang_canard){
 	image = spr_date_canard 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Ils sont trop miniooooons! Nourris les s'il te plaît !"
+	dialogue[0][0] = "Ils sont trop mignooooons! Nourris les s'il te plaît !"
 }
 
 with (sc_etang_skinny_dip){
@@ -461,8 +465,8 @@ with (sc_etang_skinny_dip){
 	sound = snd_electricite
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE ÉNORMÉMENT"
-	dialogue[1] = "Au moins j'aurai vu une femme nue avant ma mort ! Yes !"
+	dialogue[0][0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE ÉNORMÉMENT"
+	dialogue[0][1] = "Au moins j'aurai vu une femme nue avant ma mort ! Yes !"
 }
 
 with(sc_perdu_canard){
@@ -470,16 +474,16 @@ with(sc_perdu_canard){
 	musique = snd_musique
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Oh non... t'es trop nul en fait !"
-	dialogue[1] = "Laisse moi le faire ! *Trébuche* AAAAAAH SPLOUSH ARGH !"
+	dialogue[0][0] = "Oh non... t'es trop nul en fait !"
+	dialogue[0][1] = "Laisse moi le faire ! *Trébuche* AAAAAAH SPLOUSH ARGH !"
 }
 
 with(sc_noyade){
 	image = spr_etang_noyade
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Bon... j'imagine que c'est des choses qui arrivent"
-	dialogue[1] = "Mieux vaudrait partir d'ici avant que quelqu'un me voie..."
+	dialogue[0][0] = "Bon... j'imagine que c'est des choses qui arrivent"
+	dialogue[0][1] = "Mieux vaudrait partir d'ici avant que quelqu'un me voie..."
 }
 
 with(sc_gagne_canard){
@@ -487,9 +491,9 @@ with(sc_gagne_canard){
 	musique = snd_musique
 	nb_repliques = 2
 	nb_dialogues = 1
-	dialogue[0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... Je vis un moment incroyable !"
-	replique[0] = "L'embrasser"
-	replique[1] = "Embrasser le canard"
+	dialogue[0][0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... Je vis un moment incroyable !"
+	replique[0][0] = "L'embrasser"
+	replique[0][1] = "Embrasser le canard"
 }
 
 
@@ -497,15 +501,15 @@ with (sc_kiss_fille){
 	image = spr_bisou_fille 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0] = "Mwah smack smack ! Tu as réussi, bien joué !"
+	dialogue[0][0] = "Mwah smack smack ! Tu as réussi, bien joué !"
 }
 
 with (sc_kiss_canard){
 	image = spr_bisou_canard 
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Ne jamais mordre la main qui te nourrit !"
-	dialogue[1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
+	dialogue[0][0] = "Ne jamais mordre la main qui te nourrit !"
+	dialogue[0][1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
 }
 
 //quicaillerie
@@ -513,10 +517,10 @@ with(sc_quincaillerie){
 	image = spr_expl_quincaillerie
 	nb_repliques = 0
 	nb_dialogues = 4
-	dialogue[0] = "Parfait, j'avais quelques comissions à faire."
-	dialogue[1] = "Ma bicyclète est brisée, je t'emmène à la quicaillerie."
-	dialogue[2] = "QUOI? T'ES JAMAIS ALLÉ À LA QUICAILLERIE ?!?!";
-	dialogue[3] = "Suis-moi je vais touuuuut te montrer.";
+	dialogue[0][0] = "Parfait, j'avais quelques comissions à faire."
+	dialogue[0][1] = "Ma bicyclète est brisée, je t'emmène à la quicaillerie."
+	dialogue[0][2] = "QUOI? T'ES JAMAIS ALLÉ À LA QUICAILLERIE ?!?!";
+	dialogue[0][3] = "Suis-moi je vais touuuuut te montrer.";
 }
 
 with(sc_questionnement){
@@ -524,13 +528,13 @@ with(sc_questionnement){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 3
 	nb_dialogues = 4
-	dialogue[0] = "Mais... c'est un cimetière intérieur cet endroit."
-	dialogue[1] = "Ce sont les parties du corps de tous mes amis robots !"
-	dialogue[2] = "Je ne veux pas compromettre mon identité, mais c'est beaucoup trop."
-	dialogue[3] = "Que faire ???"
-	replique[0] = "Rester calme"
-	replique[1] = "S'indigner"
-	replique[2] = "Battre le commis"
+	dialogue[0][0] = "Mais... c'est un cimetière intérieur cet endroit."
+	dialogue[0][1] = "Ce sont les parties du corps de tous mes amis robots !"
+	dialogue[0][2] = "Je ne veux pas compromettre mon identité, mais c'est beaucoup trop."
+	dialogue[0][3] = "Que faire ???"
+	replique[0][0] = "Rester calme"
+	replique[0][1] = "S'indigner"
+	replique[0][2] = "Battre le commis"
 }
 
 
@@ -538,72 +542,72 @@ with (sc_q_rester_calme){
 	image = spr_rassure_quinc
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Est-ce que tout va bien mon chou ?"
-	dialogue[1] = "Suis moi, je vais t'emmener dans mon coin favori !"
+	dialogue[0][0] = "Est-ce que tout va bien mon chou ?"
+	dialogue[0][1] = "Suis moi, je vais t'emmener dans mon coin favori !"
 }
 
 with(sc_q_indigner){
 	image = spr_indigner
 	nb_repliques = 0
 	nb_dialogues = 3
-	dialogue[0] = "C'est n'importe quoi cet endroit Ève !"
-	dialogue[1] = "Je me sens très mal à l'aise entouré de toutes ces... pièces"
-	dialogue[2] = "Je veux qu'on sorte d'ici tout de suite."
+	dialogue[0][0] = "C'est n'importe quoi cet endroit Ève !"
+	dialogue[0][1] = "Je me sens très mal à l'aise entouré de toutes ces... pièces"
+	dialogue[0][2] = "Je veux qu'on sorte d'ici tout de suite."
 }
 
 with(sc_q_choix_apres_indign){
 	image = spr_choix_apres_indigner
 	nb_repliques = 2
 	nb_dialogues = 2
-	dialogue[0] = "Je ne comprends pas du tout de quoi tu parles..."
-	dialogue[1] = "Tu n'a pas à t'inquiéter, suis moi je vais te montrer mon coin favori !"
-	replique[0] = "Bon... d'accord tu as raison"
-	replique[1] = "Jamais de la vie ! *Chercher une arme*"
+	dialogue[0][0] = "Je ne comprends pas du tout de quoi tu parles..."
+	dialogue[0][1] = "Tu n'a pas à t'inquiéter, suis moi je vais te montrer mon coin favori !"
+	replique[0][0] = "Bon... d'accord tu as raison"
+	replique[0][1] = "Jamais de la vie ! *Chercher une arme*"
 }
 
 with(sc_q_se_promener){
 	image = spr_se_promener
 	nb_repliques = 2
 	nb_dialogues = 2
-	dialogue[0] = "Voici l'allée des marteaux et des outils à soudure !"
-	dialogue[1] = "J'aime trop cogner des clous et briser du métal comme passe temps !"
-	replique[0] = "Glups... Supeeeer..."
-	replique[1] = "C'est trop pour moi ! *Chercher une arme*"
+	dialogue[0][0] = "Voici l'allée des marteaux et des outils à soudure !"
+	dialogue[0][1] = "J'aime trop cogner des clous et briser du métal comme passe temps !"
+	replique[0][0] = "Glups... Supeeeer..."
+	replique[0][1] = "C'est trop pour moi ! *Chercher une arme*"
 }
 
 with(sc_q_chercher_arme){
 	image = spr_chercher_fusil
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Il doit bien avoir quelque chose de dangereux dans ce sacré magasin"
-	dialogue[1] = "PARFAIT! Un vrai de vrai pistolet tueur !"
+	dialogue[0][0] = "Il doit bien avoir quelque chose de dangereux dans ce sacré magasin"
+	dialogue[0][1] = "PARFAIT! Un vrai de vrai pistolet tueur !"
 }
 
 with(sc_q_chercher_arme2){
 	image = spr_commis_threat
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "EH TOI ! QUE FAIS TU AVEC UN VRAI DE VRAI PISTOLET TUEUR DANS CE MAGASIN"
-	dialogue[1] = "TU NE SORTIRAS PAS D'ICI VIVANT !"
+	dialogue[0][0] = "EH TOI ! QUE FAIS TU AVEC UN VRAI DE VRAI PISTOLET TUEUR DANS CE MAGASIN"
+	dialogue[0][1] = "TU NE SORTIRAS PAS D'ICI VIVANT !"
 }
 
 with(sc_q_bagarre_commis){
 	image = spr_provoquer_commis
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "EH SALOPARD ! C'EST TOI QUI TRAVAILLE ICI ?!?"
-	dialogue[1] = "VIENS T'EN QUE JE T'EN COLLE TOUTE QU'UNE !"
+	dialogue[0][0] = "EH SALOPARD ! C'EST TOI QUI TRAVAILLE ICI ?!?"
+	dialogue[0][1] = "VIENS T'EN QUE JE T'EN COLLE TOUTE QU'UNE !"
 }
 
 with(sc_q_combat_femme){
 	image = spr_ferailleuse
 	nb_repliques = 0
 	nb_dialogues = 5
-	dialogue[0] = "Quoi ? Ça ne t'inquiète pas plus que ça ? Pourtant ça devrait te faire peur..."
-	dialogue[1] = "Mouhahaha ne fais pas cette expression, je sais depuis le début que tu es un robot"
-	dialogue[2] = "Sérieusement ? Une simple perruque et un veston, ce n'est vraiment pas discret."
-	dialogue[3] = "Pourquoi penses-tu qu'on a matché sur Tinda, je suis en fait une traqueuse de ferraille !"
-	dialogue[4] = "Viens ici que je te démembres et te vende au plus offrant !"
+	dialogue[0][0] = "Quoi ? Ça ne t'inquiète pas plus que ça ? Pourtant ça devrait te faire peur..."
+	dialogue[0][1] = "Mouhahaha ne fais pas cette expression, je sais depuis le début que tu es un robot"
+	dialogue[0][2] = "Sérieusement ? Une simple perruque et un veston, ce n'est vraiment pas discret."
+	dialogue[0][3] = "Pourquoi penses-tu qu'on a matché sur Tinda, je suis en fait une traqueuse de ferraille !"
+	dialogue[0][4] = "Viens ici que je te démembres et te vende au plus offrant !"
 }
 
 with(sc_q_perdre_combat_tout){
@@ -611,8 +615,8 @@ with(sc_q_perdre_combat_tout){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Quand un coup est parti, même quatre chevaux seraient en peine pour le rattraper."
-	dialogue[1] = "Comme quoi la violence ne résout pas toujours tous les conflits..."
+	dialogue[0][0] = "Quand un coup est parti, même quatre chevaux seraient en peine pour le rattraper."
+	dialogue[0][1] = "Comme quoi la violence ne résout pas toujours tous les conflits..."
 }
 
 with(sc_q_gagner_bagarre_commis){
@@ -620,8 +624,8 @@ with(sc_q_gagner_bagarre_commis){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Mais voyons ! Qu'as-tu fait grand fou ?!?"
-	dialogue[1] = "Quelqu'un ! Appelez la police !"
+	dialogue[0][0] = "Mais voyons ! Qu'as-tu fait grand fou ?!?"
+	dialogue[0][1] = "Quelqu'un ! Appelez la police !"
 }
 
 with(sc_q_gagner_bagarre_commis_2){
@@ -629,8 +633,8 @@ with(sc_q_gagner_bagarre_commis_2){
 	sound = snd_police
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Allez passez lui les menotes, il en a au moins pour 10 ans de prison."
-	dialogue[1] = "EH ! Pourquoi ses bras sont en métal ?"
+	dialogue[0][0] = "Allez passez lui les menotes, il en a au moins pour 10 ans de prison."
+	dialogue[0][1] = "EH ! Pourquoi ses bras sont en métal ?"
 }
 
 with(sc_q_gagner_combat_femme){
@@ -638,8 +642,8 @@ with(sc_q_gagner_combat_femme){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Woah mais quelle folle ! Personne ne touche à mes boulons !"
-	dialogue[1] = "Pour une fois que j'avais un rendez-vous qui se passait bien..."
+	dialogue[0][0] = "Woah mais quelle folle ! Personne ne touche à mes boulons !"
+	dialogue[0][1] = "Pour une fois que j'avais un rendez-vous qui se passait bien..."
 	
 }
 
@@ -648,8 +652,8 @@ with(sc_q_perdre_combat_femme){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Hehe tu étais bien membré à ce que je vois."
-	dialogue[1] = "Je vais me faire une petite fortune avec toutes ces composantes."
+	dialogue[0][0] = "Hehe tu étais bien membré à ce que je vois."
+	dialogue[0][1] = "Je vais me faire une petite fortune avec toutes ces composantes."
 }
 
 with(sc_q_gagner_combat_fusil){
@@ -657,27 +661,27 @@ with(sc_q_gagner_combat_fusil){
 	musique = snd_musique_quicaillerie
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "C'est bon Ève ! Je l'ai eu ce dangereux commis !"
-	dialogue[1] = "Plus personne ne sera blessé par c.. Ève?"
+	dialogue[0][0] = "C'est bon Ève ! Je l'ai eu ce dangereux commis !"
+	dialogue[0][1] = "Plus personne ne sera blessé par c.. Ève?"
 }
 
 with(sc_q_gagner_combat_fusil_2){
 	image = spr_eve_blessee_2
 	nb_repliques = 0
 	nb_dialogues = 3
-	dialogue[0] = "Argh, j'ai reçu une balle perdue..."
-	dialogue[1] = "C'en est fini pour moi... je me sens mourir..."
-	dialogue[2] = "Du moins..."
+	dialogue[0][0] = "Argh, j'ai reçu une balle perdue..."
+	dialogue[0][1] = "C'en est fini pour moi... je me sens mourir..."
+	dialogue[0][2] = "Du moins..."
 }
 
 with(sc_q_gagner_combat_fusil_3){
 	image = spr_eve_blessee_3
 	nb_repliques = 0
 	nb_dialogues = 4
-	dialogue[0] = "Mon enveloppe corporelle est en train de mourir."
-	dialogue[1] = "Je vais devoir vider la cervelle de quelqu'un cette nuit pour aller m'y loger."
-	dialogue[2] = "Ce fut un plaisir de te rencontrer, nous nous reverrons bientôt."
-	dialogue[3] = "J'espère que mon prochain corps va convenir à tes standards de beauté !"
+	dialogue[0][0] = "Mon enveloppe corporelle est en train de mourir."
+	dialogue[0][1] = "Je vais devoir vider la cervelle de quelqu'un cette nuit pour aller m'y loger."
+	dialogue[0][2] = "Ce fut un plaisir de te rencontrer, nous nous reverrons bientôt."
+	dialogue[0][3] = "J'espère que mon prochain corps va convenir à tes standards de beauté !"
 }
 
 //film 
@@ -686,20 +690,20 @@ with(sc_film_entree){
 	musique = snd_musique
 	nb_repliques = 3
 	nb_dialogues = 3
-	dialogue[0] = "C'est ici que j'habite, c'est pas très grand mais ça serait assez pour deux ;)"
-	dialogue[1] = "Allez, viens prendre une place sur le divan !"
-	dialogue[2] = "Alors on écoute quoi chaton ?"
-	replique[0] = "Quelque chose de romantique comme Titanic !"
-	replique[1] = "On pourrait seulement écouter Netflix et..."
-	replique[2] = "Yes ! On écoute Transformers !"
+	dialogue[0][0] = "C'est ici que j'habite, c'est pas très grand mais ça serait assez pour deux ;)"
+	dialogue[0][1] = "Allez, viens prendre une place sur le divan !"
+	dialogue[0][2] = "Alors on écoute quoi chaton ?"
+	replique[0][0] = "Quelque chose de romantique comme Titanic !"
+	replique[0][1] = "On pourrait seulement écouter Netflix et..."
+	replique[0][2] = "Yes ! On écoute Transformers !"
 }
 
 with(sc_f_titanic){
 	image =spr_titanic_1
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Oh trop bien on va passer un troooop bon moment !"
-	dialogue[1] = "Errrmmm c'est quoi le bruit qu'on entend ?"
+	dialogue[0][0] = "Oh trop bien on va passer un troooop bon moment !"
+	dialogue[0][1] = "Errrmmm c'est quoi le bruit qu'on entend ?"
 }
 
 with(sc_f_bateau){
@@ -707,64 +711,64 @@ with(sc_f_bateau){
 	sound = snd_crate
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "HOOOONK HOOONK MOTHERTRUCKERS !"
-	dialogue[1] = "OH LA VACHE MAMAN !"
+	dialogue[0][0] = "HOOOONK HOOONK MOTHERTRUCKERS !"
+	dialogue[0][1] = "OH LA VACHE MAMAN !"
 }
 
 with(sc_f_transformers){
 	image = spr_appeure
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Zute... j'aurais du penser à choisir un film un peu moins épeurant..."
-	dialogue[1] = "Toute cette violence... envers mes chers frères..."
+	dialogue[0][0] = "Zute... j'aurais du penser à choisir un film un peu moins épeurant..."
+	dialogue[0][1] = "Toute cette violence... envers mes chers frères..."
 }
 
 with(sc_f_robot_ending_1){
 	image = spr_transform_1
 	nb_repliques = 0
 	nb_dialogues = 5
-	dialogue[0] = "Pourquoi tu fais cette façe beauté ?"
-	dialogue[1] = "Toi aussi... ça te fait peur? Je crois savoir pourquoi..."
-	dialogue[2] = "Tu sais garder un secret ? De toute façon tu l'as sûrement déjà deviné..."
-	dialogue[3] = "..."
-	dialogue[4] = "Je suis en réalité "
+	dialogue[0][0] = "Pourquoi tu fais cette façe beauté ?"
+	dialogue[0][1] = "Toi aussi... ça te fait peur? Je crois savoir pourquoi..."
+	dialogue[0][2] = "Tu sais garder un secret ? De toute façon tu l'as sûrement déjà deviné..."
+	dialogue[0][3] = "..."
+	dialogue[0][4] = "Je suis en réalité "
 }
 
 with(sc_f_robot_ending_2){
 	image = spr_transform_2
 	nb_repliques = 0
 	nb_dialogues = 3
-	dialogue[0] = "Optimus Prime, commandant des autobots, groupe d'héroïques robots extraterrestres..."
-	dialogue[1] = "... capables de se tranformer en divers véhicules !"
-	dialogue[2] = "Viens habiter la façe cachée de la lune avec moi !"
+	dialogue[0][0] = "Optimus Prime, commandant des autobots, groupe d'héroïques robots extraterrestres..."
+	dialogue[0][1] = "... capables de se tranformer en divers véhicules !"
+	dialogue[0][2] = "Viens habiter la façe cachée de la lune avec moi !"
 }
 
 with(sc_f_robot_ending_3){
 	image = spr_transform_3
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Nous sommes bien mieux loin de ce merdier !"
-	dialogue[1] = "Fondons une famille et colonisons l'univers !"
+	dialogue[0][0] = "Nous sommes bien mieux loin de ce merdier !"
+	dialogue[0][1] = "Fondons une famille et colonisons l'univers !"
 }
 
 with(sc_f_netflix){
 	image = spr_film_sexe
 	nb_repliques = 2
 	nb_dialogues = 3
-	dialogue[0] = "Ouuh j'adore ton idée ;)"
-	dialogue[1] = "Dans ce cas, on passera pas par tous les chemins qui mènent à Rome."
-	dialogue[2] = "Déshabilles toi grand fou !"
-	replique[0] = "NON ! Je dois garder ma couverture de robot !"
-	replique[1] = "Allez poupée ! Viens à moi !"
+	dialogue[0][0] = "Ouuh j'adore ton idée ;)"
+	dialogue[0][1] = "Dans ce cas, on passera pas par tous les chemins qui mènent à Rome."
+	dialogue[0][2] = "Déshabilles toi grand fou !"
+	replique[0][0] = "NON ! Je dois garder ma couverture de robot !"
+	replique[0][1] = "Allez poupée ! Viens à moi !"
 }
 
 with(sc_f_pudique){
 	image = spr_film_pudique
 	nb_repliques = 0
 	nb_dialogues = 3
-	dialogue[0] = "Quoi !?!?!?!? Après toute cette soirée tu veux même pas de moi ?"
-	dialogue[1] = "C'est n'importe quoi ! JE TE DÉTESTEEEEE"
-	dialogue[2] = "Tu vas le regretter..."
+	dialogue[0][0] = "Quoi !?!?!?!? Après toute cette soirée tu veux même pas de moi ?"
+	dialogue[0][1] = "C'est n'importe quoi ! JE TE DÉTESTEEEEE"
+	dialogue[0][2] = "Tu vas le regretter..."
 }
 
 with(sc_f_dog){
@@ -772,17 +776,17 @@ with(sc_f_dog){
 	image =spr_film_chien
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "SCOOBY-DOO ! ATTAQUE"
-	dialogue[1] = "AAAAAAHH AHHHH BZZT DZZ POW BIM DZZZ"
+	dialogue[0][0] = "SCOOBY-DOO ! ATTAQUE"
+	dialogue[0][1] = "AAAAAAHH AHHHH BZZT DZZ POW BIM DZZZ"
 }
 
 with(sc_f_naked){
 	image = spr_film_peau_metal
 	nb_repliques = 0
 	nb_dialogues = 3
-	dialogue[0] = "Oh oui enlèves ta chemise beau gosse !"
-	dialogue[1] = "Ermm... pourquoi ta peau est toute grise ? Et où sont passés tes cheveux !"
-	dialogue[2] = "Ne me dit pas que... non c'est trop beau pour être vrai !"
+	dialogue[0][0] = "Oh oui enlèves ta chemise beau gosse !"
+	dialogue[0][1] = "Ermm... pourquoi ta peau est toute grise ? Et où sont passés tes cheveux !"
+	dialogue[0][2] = "Ne me dit pas que... non c'est trop beau pour être vrai !"
 }
 
 with(sc_f_robot_sex){
@@ -790,8 +794,8 @@ with(sc_f_robot_sex){
 	musique = snd_sex
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Tu es un robot toi aussi ! Je suis tellement soulagée"
-	dialogue[1] = "Allez viens me graisser les tuyaux, mon port USB n'attend que ta clé"
+	dialogue[0][0] = "Tu es un robot toi aussi ! Je suis tellement soulagée"
+	dialogue[0][1] = "Allez viens me graisser les tuyaux, mon port USB n'attend que ta clé"
 }
 
 with(sc_f_loose_sex){
@@ -799,16 +803,16 @@ with(sc_f_loose_sex){
 	musique = snd_musique
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Bon... Non mais c'est vraiment pas grave, ça arrive à tout le monde."
-	dialogue[1] = "De toute façon tu dois être un gros puceau, oui toi derrière l'écran! Puceau ! Puceau !"
+	dialogue[0][0] = "Bon... Non mais c'est vraiment pas grave, ça arrive à tout le monde."
+	dialogue[0][1] = "De toute façon tu dois être un gros puceau, oui toi derrière l'écran! Puceau ! Puceau !"
 }
 
 with(sc_f_win_sex){
 	image = spr_film_gagne_sex
 	nb_repliques = 0
 	nb_dialogues = 2
-	dialogue[0] = "Ouhlala ça faisait assez longtemps que j'avais bien niqué comme ça !"
-	dialogue[1] = "On se rappelle bientôt d'accord ?"
+	dialogue[0][0] = "Ouhlala ça faisait assez longtemps que j'avais bien niqué comme ça !"
+	dialogue[0][1] = "On se rappelle bientôt d'accord ?"
 }
 
 //minigames
@@ -855,10 +859,10 @@ with(sc_menu){
 	image = spr_attention
 	nb_repliques = 2
 	nb_dialogues = 2
-	dialogue[0] = "Attention, ce jeu est destiné à un auditoire de 13 ans et plus."
-	dialogue[1] = "Es-tu assez vieux pour jouer ?"
-	replique[0] = "Non, j'ai moins de 13 ans"
-	replique[1] = "Oui, j'ai 13 ans et plus"
+	dialogue[0][0] = "Attention, ce jeu est destiné à un auditoire de 13 ans et plus."
+	dialogue[0][1] = "Es-tu assez vieux pour jouer ?"
+	replique[0][0] = "Non, j'ai moins de 13 ans"
+	replique[0][1] = "Oui, j'ai 13 ans et plus"
 }
 
 setDependances()

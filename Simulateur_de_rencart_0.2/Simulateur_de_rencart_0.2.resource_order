@@ -132,7 +132,6 @@
     {"name":"spr_transform_2","order":20,"path":"sprites/spr_transform_2/spr_transform_2.yy",},
     {"name":"spr_transform_3","order":21,"path":"sprites/spr_transform_3/spr_transform_3.yy",},
     {"name":"spr_tuer_femme","order":33,"path":"sprites/spr_tuer_femme/spr_tuer_femme.yy",},
-    {"name":"spr_tuyau","order":7,"path":"sprites/spr_tuyau/spr_tuyau.yy",},
     {"name":"spr_verre_eau","order":6,"path":"sprites/spr_verre_eau/spr_verre_eau.yy",},
     {"name":"spr_vue_quinc","order":10,"path":"sprites/spr_vue_quinc/spr_vue_quinc.yy",},
     {"name":"spr_wall","order":4,"path":"sprites/spr_wall/spr_wall.yy",},

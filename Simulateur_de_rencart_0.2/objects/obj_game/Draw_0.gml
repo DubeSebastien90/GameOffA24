@@ -28,12 +28,12 @@ if scene_actuelle.nb_repliques>0{
 	val = 120
 	draw_set_color(c_white)
 }
-draw_text_ext_transformed(5,val,scene_actuelle.dialogue[dialogue_actuel],19,(room_width-15)/0.45,0.45,0.45,0)
+draw_text_ext_transformed(5,val,scene_actuelle.dialogue[langage][dialogue_actuel],19,(room_width-15)/0.45,0.45,0.45,0)
 
 if dialogue_actuel = scene_actuelle.nb_dialogues-1 && scene_actuelle.nb_repliques>0{
 	var space = 29
 	for(var i = 0; i < scene_actuelle.nb_repliques; i++){
-		var text = scene_actuelle.replique[i]
+		var text = scene_actuelle.replique[langage][i]
 		draw_text_transformed(192-5,10 + space*replique_actuelle,">",0.4,0.4,0)
 		draw_text_ext_transformed(192,10 + space*i,text,17,78/0.4,0.4,0.4,0)
 	}
