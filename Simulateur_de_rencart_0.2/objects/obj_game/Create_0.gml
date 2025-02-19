@@ -319,6 +319,7 @@ with (sc_restart){
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0][0] = "Appuies sur la barre d'espace pour commencer."
+	dialogue[1][0] = "Press space to start"
 	musique = snd_musique
 }
 
@@ -328,6 +329,9 @@ with (sc_intro_1){
 	nb_dialogues = 2
 	dialogue[0][0] = "Oh tiens regarde, un nouveau match sur Tinda!"
 	dialogue[0][1] = "Oh mon dieu qu'elle est belle! C'est certainement la femme de ma vie."
+	
+	dialogue[1][0] = "Oh look a that! I got a new match on Tinda"
+	dialogue[1][1] = "Oh my god she is so pretty! She probably is the woman of my life."
 }
 
 with (sc_intro_2){
@@ -336,6 +340,9 @@ with (sc_intro_2){
 	nb_dialogues = 2
 	dialogue[0][0] = "Mais non! Que faire! Je suis un robot, mes émotions sont simulées par des circuits électriques..."
 	dialogue[0][1] = "Personne ne voudra de moi pour une relation à caractère romantique."
+	
+	dialogue[1][0] = "Wait! What can I do? I am a robot, my feelings are simulated by electrical circuits"
+	dialogue[1][1] = "Nobody will ever want me as a partner for a romantic relationship."
 
 }
 
