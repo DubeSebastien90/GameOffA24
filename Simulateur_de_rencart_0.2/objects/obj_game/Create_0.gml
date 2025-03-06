@@ -1,7 +1,7 @@
 randomize()
 
 //easy access
-langage = 0
+langage = 1
 //français = 0, anglais = 1
 
 //endigns
@@ -314,13 +314,16 @@ sc_f_robot_sex = instance_create_depth(0,0,-1000,obj_scene)
 sc_f_win_sex = instance_create_depth(0,0,-1000,obj_scene)
 sc_f_loose_sex = instance_create_depth(0,0,-1000,obj_scene)
 
+
+
 with (sc_restart){
-	image = spr_chambre
-	nb_repliques = 0
-	nb_dialogues = 1
-	dialogue[0][0] = "Appuies sur la barre d'espace pour commencer."
+	image = spr_chambre //image à afficher
+	nb_repliques = 0 // le nombre de répliques (si 0, mode cinema)
+	nb_dialogues = 1 // le nombre de blocs de texte
+	dialogue[0][0] = "Appuies sur la barre d'espace pour commencer." // dialogue[a][b] où a = langue et b = index du dialogue
 	dialogue[1][0] = "Press space to start"
-	musique = snd_musique
+	musique = snd_musique //nouvelle musique à jouer lors de la scène, par défaut noone
+	//sound = snd_exemple son à jouer au début de la scène, par défaut noone
 }
 
 with (sc_intro_1){
@@ -352,6 +355,9 @@ with (sc_intro_3){
 	nb_dialogues = 2
 	dialogue[0][0] = "Une chance qu'un aveugle passait dans le coin, j'ai pu me dénicher un beau déguisement."
 	dialogue[0][1] = "Le plan est INFAILLIBLE! Avec ces habits, elle n'y verra que du feu."
+	
+	dialogue[1][0] = "Luckily, a blind man was walking around here, I was able to find this costume."
+	dialogue[1][1] = "That's a PERFECT plan! Nobody is going to know!"
 }
 
 with(sc_mort_voiture){
@@ -361,6 +367,9 @@ with(sc_mort_voiture){
 	nb_dialogues = 2
 	dialogue[0][0] = "Il est toujours important de regarder des deux côtés de la rue avant de traverser."
 	dialogue[0][1] = "Comme quoi, l'amour rend vraiment aveugle..."
+	
+	dialogue[1][0] = "Don't forget to look both ways before crossing the road."
+	dialogue[1][1] = "Maybe it's true, love is really blind..."
 }
 
 with (sc_resto){
@@ -371,8 +380,16 @@ with (sc_resto){
 	replique[0][0] = "Merci, c'est très gentil"
 	replique[0][1] = "Toi aussi, tu es très charmante"
 	replique[0][2] = "*Imploser*"
-	dialogue[0][0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rendez-vous?"
+	
+	dialogue[0][0] = "Salut, moi c'est Ève, c'est bien avec toi que j'avais un rencard?"
 	dialogue[0][1] = "Wow, tu es beaucoup plus beau en vrai que sur tes photos!"
+	
+	replique[1][0] = "Thanks, you're very kind"
+	replique[1][1] = "I could say the same about you!"
+	replique[1][2] = "*Implode*"
+	
+	dialogue[1][0] = "Hey, I'm Eva, you're my date?"
+	dialogue[1][1] = "Wow, you're way more handsome in real life than in your pictures"
 }
 
 
@@ -383,6 +400,9 @@ with (sc_resto_explosion){
 	nb_dialogues = 2
 	dialogue[0][0] = "BOUM POW AAAAAAAAAAAAH"
 	dialogue[0][1] = "Zute de flute, pour une fois que ma date se passait à merveille."
+	
+	dialogue[1][0] = "BOOM POW AAAAAAAAAAAAH"
+	dialogue[1][1] = "Oh snap, it was the first time my date was going very well."
 }
 
 with (sc_resto_serveur){
@@ -391,10 +411,19 @@ with (sc_resto_serveur){
 	nb_dialogues = 2
 	dialogue[0][0] = "Bonsoir mes tourtereaux..."
 	dialogue[0][1] = "Que puis-je vous servir ce soir ?"
+	
 	replique[0][0] = "Un verre d'eau frais !"
 	replique[0][1] = "Un verre d'huile, bip boup."
 	replique[0][2] = "Un spaghetti sauce bolognaise !"
 	replique[0][3] = "OMG J'ÉTAIS PAS PRÊT POUR ÇA ! *Courir aux toilettes*"
+	
+	dialogue[1][0] = "Good evening lovers..."
+	dialogue[1][1] = "How can I help you tonight?"
+	
+	replique[1][0] = "Just a glass of water !"
+	replique[1][1] = "Can I get some oil ? Beep boop."
+	replique[1][2] = "I'll have a spaghetti bolognese please."
+	replique[1][3] = "OMG I WASN'T READY FOR THIS ! *Run to the bathrooms*"
 }
 
 
@@ -404,6 +433,8 @@ with (sc_resto_vers_eau){
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0][0] = "Miam, un bon verre d'ea...GYAYAAAAAAHEEAOFIDF *mort soufffrante*"
+	
+	dialogue[1][0] = "Yummy, a fresh glass of wa... GYAYAAAAAAHEEAOFIDF *suffering death*"
 }
 
 with (sc_resto_vers_huile){
@@ -412,6 +443,9 @@ with (sc_resto_vers_huile){
 	nb_dialogues = 2
 	dialogue[0][0] = "What, t'es trop bizarre lol. Je trouve ça très masculin boire de l'huile, j'aime ça."
 	dialogue[0][1] = "Quoi? C'est pas bizarre du tout manger une carotte... "
+	
+	dialogue[1][0] = "You're so weird lol. Drinking oil is very masculine, I like it."
+	dialogue[1][1] = "What? Everyone eats carrots... That's perfecly normal..."
 }
 
 
@@ -421,6 +455,9 @@ with (sc_resto_spag){
 	nb_dialogues = 2
 	dialogue[0][0] = "Le classique. Ok je savais pas que t'étais de même."
 	dialogue[0][1] = "Arrête! Une carotte c'est vraiment plus original."
+	
+	dialogue[1][0] = "Classic! Didn't know you were like that."
+	dialogue[1][1] = "Stop it! A carrot is WAY more original."
 }
 
 with (sc_resto_toilette){
@@ -428,13 +465,17 @@ with (sc_resto_toilette){
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0][0] = "Omg j'ai passé trop proche de la catastrophe, allez, on respire et on y retourne."
+	
+	dialogue[1][0] = "Omg that was almost a disaster... Take a breath, here we go again."
 }
 
 with (sc_resto_demasquage){
 	image = spr_pas_perruque 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0][0] = "WHAT THE FUUUUUUUUUCK. AHHHHHHHHHHHHHHHHHHHHHHHH."
+	dialogue[0][0] = "OH NOOOON MA PERRUQUE ! J'AI ÉTÉ DÉMASQUÉ ! AAAAAAAAAAAH"
+	
+	dialogue[1][0] = "OH NOOOOO MY WIG ! SHE KNOWS EVERYTHING NOW ! AAAAAAAAAAAH"
 }
 
 
@@ -444,9 +485,17 @@ with (sc_resto_demande_next_activite){
 	nb_dialogues = 2
 	dialogue[0][0] = "Omg c'était trop amusant et HUMAIN de manger ensemble."
 	dialogue[0][1] = "Aimerais-tu qu'on aille ailleurs ? Quelle idée préfères-tu ?"
+	
 	replique[0][0] = "Je connais un étang trop chou pas trop loin d'ici..."
 	replique[0][1] = "Je te laisse décider, emmène moi à ton endroit favori !"
 	replique[0][2] = "Et si on allait chez moi écouter un film ? "
+	
+	dialogue[1][0] = "Omg that was so funny and HUMAN to eat together."
+	dialogue[1][1] = "Would you like to go soewhre else ? What dou you prefer ?"
+	
+	replique[1][0] = "I know a cute pond pretty close..."
+	replique[1][1] = "You choose, bring me to your favorite place !"
+	replique[1][2] = "We could go at my place to watch a movie ?"
 }
 
 with (sc_etang_entree){
@@ -455,8 +504,14 @@ with (sc_etang_entree){
 	nb_repliques = 2
 	nb_dialogues = 1
 	dialogue[0][0] = "Vraiment charmant cet étang ! Qu'est-ce qu'on pourrait bien y faire ? "
+	
 	replique[0][0] = "SKINNY DIP !!"
 	replique[0][1] = "Nourrir les canards serait un choix à la fois écologiquement responsable et rapprocheur :)"
+	
+	dialogue[1][0] = "What a lovely pond ! What should we do here ?"
+	
+	replique[1][0] = "SKINNY DIP !!"
+	replique[1][1] = "Feeding the ducks while talking would bring us closer :)"
 }
 
 
@@ -464,7 +519,9 @@ with (sc_etang_canard){
 	image = spr_date_canard 
 	nb_repliques = 0
 	nb_dialogues = 1
-	dialogue[0][0] = "Ils sont trop mignooooons! Nourris les s'il te plaît !"
+	dialogue[0][0] = "Ils sont trop mignooooons ! Nourris les s'il te plaît !"
+	
+	dialogue[1][0] = "They are soooo cute ! Can you feed them please ?"
 }
 
 with (sc_etang_skinny_dip){
@@ -474,6 +531,9 @@ with (sc_etang_skinny_dip){
 	nb_dialogues = 2
 	dialogue[0][0] = "OH NON ÇA FAIT TROP MAL, JE SOUFFRE ÉNORMÉMENT"
 	dialogue[0][1] = "Au moins j'aurai vu une femme nue avant ma mort ! Yes !"
+	
+	dialogue[1][0] = "OH GOD IT HURTS, I'M SUFFERING SOOO BAD"
+	dialogue[1][1] = "Well at least I saw a naked woman before dying ! YEAH !"
 }
 
 with(sc_perdu_canard){
@@ -483,6 +543,9 @@ with(sc_perdu_canard){
 	nb_dialogues = 2
 	dialogue[0][0] = "Oh non... t'es trop nul en fait !"
 	dialogue[0][1] = "Laisse moi le faire ! *Trébuche* AAAAAAH SPLOUSH ARGH !"
+	
+	dialogue[1][0] = "Oh... stop it you're very bad !"
+	dialogue[1][1] = "Let me do it ! *stumbles* AAAAAAH SPLOOSH ARGH !"
 }
 
 with(sc_noyade){
@@ -491,6 +554,9 @@ with(sc_noyade){
 	nb_dialogues = 2
 	dialogue[0][0] = "Bon... j'imagine que c'est des choses qui arrivent"
 	dialogue[0][1] = "Mieux vaudrait partir d'ici avant que quelqu'un me voie..."
+	
+	dialogue[1][0] = "Welp... I guess this can happen sometimes..."
+	dialogue[1][1] = "I should get out of here before someone sees me..."
 }
 
 with(sc_gagne_canard){
@@ -499,8 +565,14 @@ with(sc_gagne_canard){
 	nb_repliques = 2
 	nb_dialogues = 1
 	dialogue[0][0] = "Wow, comme c'est romantique de nourrir les canards, ensemble... Je vis un moment incroyable !"
+	
 	replique[0][0] = "L'embrasser"
 	replique[0][1] = "Embrasser le canard"
+	
+	dialogue[1][0] = "Wow it's so romantic ! I'm having a wonderful time..."
+	
+	replique[1][0] = "Kiss her"
+	replique[1][1] = "Kiss the duck"
 }
 
 
@@ -509,6 +581,8 @@ with (sc_kiss_fille){
 	nb_repliques = 0
 	nb_dialogues = 1
 	dialogue[0][0] = "Mwah smack smack ! Tu as réussi, bien joué !"
+	
+	dialogue[1][0] = "Kiss smack smack ! You managed to do it, good job !"
 }
 
 with (sc_kiss_canard){
@@ -517,6 +591,9 @@ with (sc_kiss_canard){
 	nb_dialogues = 2
 	dialogue[0][0] = "Ne jamais mordre la main qui te nourrit !"
 	dialogue[0][1] = "Comme quoi le vrai amour est parfois celui qui vient à nous <3 <3 <3"
+	
+	dialogue[1][0] = "Never bite the hand that feeds you !"
+	dialogue[1][1] = "Real love is sometimes far from expected <3 <3 <3"
 }
 
 //quicaillerie
@@ -873,4 +950,4 @@ with(sc_menu){
 }
 
 setDependances()
-setNextScene(sc_menu)
+setNextScene(sc_restart)

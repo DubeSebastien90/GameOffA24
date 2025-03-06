@@ -11,3 +11,6 @@ fin = -1
 
 tempsJeu = 60*30
 temps = 0
+
+tempsRestant[0] = "Temps restant: "
+tempsRestant[1] = "Time left: "
