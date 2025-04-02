@@ -5,10 +5,44 @@ langage = 0
 //français = 0, anglais = 1
 
 //endigns
+fin_debloquees = 0
 nb_endings = sprite_get_number(spr_chambre)-1
 for(var i = 0; i < nb_endings; i++){
 	unlock[i] = 0
 }
+
+if (file_exists("savefile.ini")){
+    ini_open("savefile.ini")
+
+    for (var i = 0; i < nb_endings; i++){
+        unlock[i] = ini_read_real("Unlocks", "ending_" + string(i), 0);
+    }
+
+	ini_close();
+} else {
+	for(var i = 0; i < nb_endings; i++){
+		unlock[i] = 0
+	}
+}
+
+function findUnlockNumbers(){	
+	fin_debloquees = 0
+	for(var i = 0; i < nb_endings; i++){
+		if unlock[i] ==1 {
+			fin_debloquees += 1
+		}
+	}
+	
+	ini_open("savefile.ini");
+    
+    for (var i = 0; i < nb_endings; i++){
+        ini_write_real("Unlocks", "ending_" + string(i), unlock[i])
+    }
+
+    ini_close();
+}
+
+findUnlockNumbers()
 
 TRICHERIE = false
 

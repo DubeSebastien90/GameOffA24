@@ -19,6 +19,9 @@ if scene_actuelle.nb_repliques>0{
 				draw_sprite(spr_chambre,i+1,0,0)
 			}
 		}
+		draw_set_color(c_black)
+		draw_set_halign(fa_center)
+		draw_text_transformed(room_width/2,3,"Fins débloquées: "+string(fin_debloquees)+"/"+string(nb_endings),0.45,0.45,0)
 	} else{
 		draw_sprite_ext(scene_actuelle.image,0,room_width/2,room_height/2 + 12,0.92,0.92,0,c_white,1)
 	}
@@ -28,6 +31,7 @@ if scene_actuelle.nb_repliques>0{
 	val = 120
 	draw_set_color(c_white)
 }
+draw_set_halign(fa_left)
 draw_text_ext_transformed(5,val,scene_actuelle.dialogue[langage][dialogue_actuel],19,(room_width-15)/0.45,0.45,0.45,0)
 
 if dialogue_actuel = scene_actuelle.nb_dialogues-1 && scene_actuelle.nb_repliques>0{

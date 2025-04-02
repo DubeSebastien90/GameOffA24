@@ -90,7 +90,9 @@ if press_space && cooldown_space < 0{
 			default:
 				break;
 		}
-		
+		if (scene_actuelle.next_scene[replique_actuelle] == sc_restart) {
+			findUnlockNumbers()
+		}
 		setNextScene(scene_actuelle.next_scene[replique_actuelle])
 	}
 	
