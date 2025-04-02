@@ -1,7 +1,7 @@
 randomize()
 
 //easy access
-langage = 1
+langage = 0
 //français = 0, anglais = 1
 
 //endigns
@@ -605,6 +605,11 @@ with(sc_quincaillerie){
 	dialogue[0][1] = "Ma bicyclète est brisée, je t'emmène à la quicaillerie."
 	dialogue[0][2] = "QUOI? T'ES JAMAIS ALLÉ À LA QUICAILLERIE ?!?!";
 	dialogue[0][3] = "Suis-moi je vais touuuuut te montrer.";
+	
+	dialogue[1][0] = "Perfect, I had to do some shopping."
+	dialogue[1][1] = "My bicycle is broken, let's go to the hardware store."
+	dialogue[1][2] = "WHAT? YOU NEVER WENT TO THE HARDWARE STORE?!?!"
+	dialogue[1][3] = "Follow me, I'll show you everything."
 }
 
 with(sc_questionnement){
@@ -616,9 +621,15 @@ with(sc_questionnement){
 	dialogue[0][1] = "Ce sont les parties du corps de tous mes amis robots !"
 	dialogue[0][2] = "Je ne veux pas compromettre mon identité, mais c'est beaucoup trop."
 	dialogue[0][3] = "Que faire ???"
+	
 	replique[0][0] = "Rester calme"
 	replique[0][1] = "S'indigner"
 	replique[0][2] = "Battre le commis"
+	
+	dialogue[1][0] = ""
+	dialogue[1][1] = ""
+	dialogue[1][2] = ""
+	dialogue[1][3] = ""
 }
 
 
